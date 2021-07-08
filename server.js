@@ -22,7 +22,7 @@ if (app.get('env') !== 'test') {
 
 app.use(express.static('public'));
 
-require('./config/passport')(db, app, passport); // pass passport for configuration
+require('./controllers/passport')(db, app, passport); // pass passport for configuration
 
 // Define our routes
 app.use('/api', require('./routes/apiRoutes')(passport, db));
@@ -52,7 +52,7 @@ if (app.get('env') === 'test') {
 
 db.sequelize.sync(syncOptions).then(() => {
   if (app.get('env') !== 'test' && syncOptions.force) {
-    require('./db/seed')(db);
+    require('./seeds/seed')(db);
   }
 
   app.listen(PORT, () => {
