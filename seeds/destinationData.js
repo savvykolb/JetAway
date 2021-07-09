@@ -109,34 +109,34 @@
 
   [
     {
-      "destination_name": "French Bread with Brie Cheese",
-      "description": "French baguette with warm brie",
-      "recommended_toDo ": "Ivan",
-      "continent_id": false
+      "destination_name": "Italy & The Greek Islands",
+      "description": "Ancient history meets epic parties on Italy and the Greek Islands. See Michelangelo’s David up close and personal in Florence, envision yourself as a Gladiator in the Colosseum of Ancient Rome and travel back in time to where Western Civilization began on the Acropolis of Athens. After all that history, unwind on a white sand beach, drink in hand, on two of Greece’s most iconic islands: Paros and Santorini.",
+      "recommended_toDo ": "Step into the Renaissance in Florence, Endulge in Italian foos and wine, Explore the Colosseum and Roman Forum, Hike to the top of Athens'Acropolis, Partake in the sunsets, atmosphere, and nightlife of Santorini, ",
+      "continent_id": 4
     },
     {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "Grand Tour of Ireland",
+        "description": "From the Cliffs of Moher and lush green fields of the countryside, to massive urban parks, the Emerald Isle takes beautiful scenery to the next level. But there’s more to Ireland than being really, really, ridiculously good looking. Have a pint at the Guinness Storehouse, feel like royalty atop Blarney Castle, and learn Irish history at every step of the way. At night, the pubs abound with live music to keep the good times going in one of the most photogenic and friendly countries in the world.",
+        "recommended_toDo ": "Pour the perfect pint of Guinness in Dublin, Enjoy Ireland's pub scene and local music, Explore the Cliffs of Moher, Blarnery Castle, and Galway, Drive the scenic Ring of Kerry.",
+        "continent_id": 4
       },
       {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "Ibiza, Barcelona and Valencia",
+        "description": "Everyone knows that Spain is a land where people eat dinner late at night and sleep during the day. But until you actually go and experience it for yourself you can’t know what it feels like to taste patatas bravas on chopitos on albóndigas on chorizo in Barcelona’s tapas bars, or to dance yourself clean to the intoxicating bass music in Ibiza’s legendary night clubs, or to crunch the sand under your feet at one of Valencia’s Mediterranean beaches. So lace up your eating shoes, put on your swankiest swim suit, and start rolling your “r’s.” You’re going to Spain.",
+        "recommended_toDo ": "Immerse yourself in Spanish culture, cuisine, and customs, Live your best life in Ibiza's nightlife, Taste-test the tapas, Relax on Valencia's world class beaches.",
+        "continent_id": 4
       },
       {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "Hike Europe: The Alps",
+        "description": "When you think of Europe, you’re probably thinking old churches, busy shopping streets, and monuments of the past. This trip is none of that. Instead, think walking, hiking, sweating, and breathing heavier than normal through the parts of Europe that not many people get to experience. In just 12 days, you’ll visit three countries, hike through vineyards, by glaciers, and up some of Europe’s most famous mountains. You might even see a cow or two. Because this trip is all about the great outdoors. Where the air is cleaner, the sounds are calming, and you can eat endless amounts of Swiss chocolate (or cheese, for those lunatics that don’t like chocolate) to counteract all the calories you’re going to burn.",
+        "recommended_toDo ": "Sweat it out during hikes in Switzerland, France, and Italy, Hike through Lavaux Vineyard Terraces that overlook Lake Geneva, Climb towards the iconic, pyramid-shaped Matterhorn mountain, passing by the Black Lake in the Zermatt region of Switzerland, Ride the rapids of the Arve river with your fellow travelers in France, Cuddle a St. Bernard during a stop in Martigny, Switzerland",
+        "continent_id": 4
       },
       {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "London & Paris Escape",
+        "description": "We’ve all heard that schoolyard rhyme about “seeing London and seeing France.” Laugh if you want, but there’s a lot of merit to doing exactly that. London is a posh playground of medieval history and futuristic skyscrapers, with pubs, parks, and world-class museums. Paris is a wonderland for anyone trying to soak up a little culture—and a lot of wine and cheese. Anyone looking for a jam-packed adventure through two of Europe’s greatest metropolises ought to look no further than this.",
+        "recommended_toDo ": "Watch the Changing of the Guard at Buckingham Palace, Taste the local cuisine, Float along the Seine River, Watch the Eiffel Tower sparker inthe Champ de Mars, Immerse yourself in London's rich history and royal rituals.",
+        "continent_id": 4
       },
     
   ]
@@ -145,34 +145,28 @@
   //Asia
   [
     {
-      "destination_name": "French Bread with Brie Cheese",
-      "description": "French baguette with warm brie",
-      "recommended_toDo ": "Ivan",
-      "continent_id": false
+      "destination_name": "Highlights of Japan",
+      "description": "Japan is a country not to be judged by its cover. Sure, this cover happens to have ancient traditions and temples, snow-capped mountains, and abnormally polite citizens that rival any Midwestern state. So what more can there be to love? Oh, only about a million things. As you explore Japan, you’ll find another world taking part below the surface. Talking toilets. Bowing wars. Cuddle cafes. This is a trip to discover the best of both worlds and experience the unexpected.",
+      "recommended_toDo ": "Meditate with Buddhist monks in the Mount Koya Monastery, enjoy fresh-made sake, Walk across the world’s busiest crosswalk at Shibuya, the Times Square of Tokyo, Visit the trendy Harajuku neighborhood of Tokyo, Learn about the history of Hiroshima.",
+      "continent_id": 5
     },
     {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "Thailand Getaway",
+        "description": "In less time than it would take you to re-watch all the seasons of Friends, you could hit the hotspots of the Thai Islands with some actual friends you’ll make along the way. Yeah, let that sink it. Then, let your toes sink into the white sands, your mouth sink into epic street food, and the island sun sink into your skin…but don’t forget the sunscreen. This trip is sightseeing, meets cultural immersion, meets spicy noodles, meets turquoise waters, meets friendly elephants, meets the best 11 days of your life. This is Thailand.",
+        "recommended_toDo ": "Get your fill of Thai street food and wander through famous night markets, Dance the nights away on the beaches of Phuket, Lounge in the sun on white sand beaches and snorkel in crystal-clear waters, Cruise through the 42 islands of Phang Nga Bay, Enter the Grand Palace.",
+        "continent_id": 5
       },
       {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "India: The Golden Triangle",
+        "description": "Not all that glitters is gold, but India’s Golden Triangle doesn’t just glitter. Break out your sunglasses because the trifecta of Delhi, Jaipur, and Agra shines bright. This trip is the Taj Mahal at sunset and yoga (in its birthplace!) at sunrise. It’s peeping for Bengal tigers on a safari, and strolling ancient palaces in eclectic cities. India is unlike any other country you’ve ever experienced before, and it’s about to rock your world, Bollywood-style.",
+        "recommended_toDo ": "Marvel at the Taj Mahal, Explore palaces and relics of colonial powers past in vibrant Delhi, Partake traditional Indian cooking demonstration, Suspend your disbelief at Jal Mahal palace floating in a lake, spot the elusive Bengal tigers of Ranthambore National Park.",
+        "continent_id": 5
       },
       {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
-      },
-      {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
+        "destination_name": "Bali: Tropical Escape",
+        "description": "There’s no denying this Indonesian island’s natural beauty, and we’d be crazy not to lead with it. But there’s more to Bali than meets the eye. This trip goes beneath the surface. You’ll discover the complexities of Balinese culture through Hindu traditions, interactions with friendly locals, and adventures at every turn. Bali is diverse. Bali is warm. Bali is an escape from the ordinary.",
+        "recommended_toDo ": "Mingle with the locals, Get your blood pumping during a canyon tubing adventure, relax on some of the world’s finest beaches, Stretch, bend, and remember to breathe during a yoga class, Balinese food culture at a traditional cooking class, Enjoy the abundance of magnificent Hindu temples in Bali. ",
+        "continent_id": 5
       },
     
   ]
@@ -181,22 +175,10 @@
 
   [
     {
-      "destination_name": "French Bread with Brie Cheese",
-      "description": "French baguette with warm brie",
-      "recommended_toDo ": "Ivan",
-      "continent_id": false
+      "destination_name": "Australia & New Zealand Adventure",
+      "description": "Chill out on the world’s best beaches before amping up the adrenaline in action sports heaven. Snorkel through shipwrecks, lounge on ship decks and feel the salt-spray and sun rays as you splash through waves. Big cities promise nightlife as wild as the outback, and outdoor adventures are even more extreme with Middle Earth as the backdrop. Whether you want to live it up or lounge in style, there’s something for everyone Down Under.",
+      "recommended_toDo ": "Snorkel with sea turtles and over 1,500 species of fish in the Great Barrier Reef, Learn to surf at Bondi Beach, Cruise the Sydney Harbor, Take advantage of the adventurous side of Queenstown, Summit Bob’s Peak for epic views of New Zealand’s pristine landscape.",
+      "continent_id": 6
     },
-    {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
-      },
-      {
-        "destination_name": "French Bread with Brie Cheese",
-        "description": "French baguette with warm brie",
-        "recommended_toDo ": "Ivan",
-        "continent_id": false
-      },
     
   ]
