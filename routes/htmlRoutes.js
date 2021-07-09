@@ -60,7 +60,9 @@ module.exports = (db) => {
   router.get('/', async (req, res) => {
     res.render('homepage');
     });
-
+    router.get('/register', async (req, res) => {
+      res.render('register');
+        });
   router.get('/africa', async (req, res) => {
     res.render('africa');
       }); 
