@@ -73,6 +73,9 @@ module.exports = (db) => {
   router.get('/end', async (req, res) => {
             res.render('end');
               });
+  router.get('/homepage', async (req, res) => {
+          res.render('homepage');
+                  });
   // Load example page and pass in an example by id
   router.get('/example/:id', function (req, res) {
     if (req.isAuthenticated()) {
