@@ -63,7 +63,10 @@ module.exports = (db) => {
 
   router.get('/africa', async (req, res) => {
     res.render('africa');
-      });
+      }); 
+       router.get('/itinerary', async (req, res) => {
+        res.render('itinerary');
+          });
       router.get('/form', async (req, res) => {
         res.render('form');
           });
