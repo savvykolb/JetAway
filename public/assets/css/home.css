@@ -161,3 +161,47 @@ body {
         opacity:1;
       }
   }
+  
+.intro{
+    
+
+  height: 50vh;
+  position: relative;
+}
+
+.slideshow-img {
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:50vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  /* display:none; */
+transition:opacity 0.75s ease-in-out ;
+}
+/* .slideshow-img:first-child{
+  display:block;
+} */
+
+.message{
+position:absolute;
+font-family: 'Caveat', cursive;
+color: white;
+font-size: 50px;
+
+}
+.container{
+
+border: 2px solid gray;
+border-radius: 5px;
+background-color:white;
+}
+
+
+
+#info-btm{
+  border-bottom: 1px solid silver;
+}
