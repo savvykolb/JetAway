@@ -64,7 +64,9 @@ module.exports = (db) => {
   router.get('/africa', async (req, res) => {
     res.render('africa');
       });
-
+      router.get('/form', async (req, res) => {
+        res.render('form');
+          });
   // Load example page and pass in an example by id
   router.get('/example/:id', function (req, res) {
     if (req.isAuthenticated()) {
