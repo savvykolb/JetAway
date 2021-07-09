@@ -22,7 +22,7 @@
       {
         "destination_name": "Egypt: Cruise the Nile",
         "description": "The Great Pyramids, the Sphinx, sailing through Aswan, the Nile River, mummies, Pharaohs, crocodiles, the list goes on. All these world-famous sights and experiences could be yours on this adventure through Egypt and the Nile River. Picture yourself in a world of ancient wonders where you’ll discover the lands behind the legends. Walk past towering stone icons, through avenues of sphinxes, and into royal valleys amid the desert sands. And if walking’s not your style, cruise down the Nile, anchoring at remote islands and beside the Theban Hills. End your adventure in Cairo, where historic mosques mingle with today’s modern bustle.",
-        "recommended_toDo ": "Ivan",
+        "recommended_toDo ": "Cruise for 3 nights and 4 days on the world’s most famous river, the Nile, Cruise for 3 nights and 4 days on the world’s most famous river, the Nile,Visit the tomb of King Tut and dozens of other pharaohs in the Valley of the Kings.",
         "continent_id": 1
       },
       {
