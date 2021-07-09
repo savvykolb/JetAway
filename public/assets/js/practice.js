@@ -24,6 +24,7 @@ $(document).ready(function(){
 // $('#africa').on('click', function () {
 //   document.location.replace(africaUrl)
 // })
+
 const slideShow = document.querySelectorAll(".intro .slideshow-img");
 const nextImageDelay = 3000;
 let currentImgCount = 0;

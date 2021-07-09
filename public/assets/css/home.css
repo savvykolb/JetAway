@@ -1,3 +1,4 @@
+/* main page */
 body {
   
     background-color: #cccccc;
@@ -44,25 +45,13 @@ body {
         font-size: 20px;
       } 
 
-    /* nav ul {
-      display: flex;
-      justify-content: space-between;
-      min-width: 300px;
-      
-
-    }
-    
-    nav a {
-      color: #b9c6ae;
-      font-weight: bold;
-      text-decoration: none;
-      letter-spacing: normal;
-    }
-     */
+ 
     nav a:hover {
       color: #fff;
     }
    
+/* home page */
+
   #title{
     background-image: url("https://res.cloudinary.com/dt84tw7zr/image/fetch/f_auto,q_auto/https://www.gameplan-a.com/wp-content/uploads/fly-images/12131/Team-top-of-the-mountain-climbing-1440x9999.jpg");
     height:100vh;
@@ -118,7 +107,7 @@ body {
   
   
     @keyframes fadeIn {
-      0% {
+      0% { 
         opacity:0;
       }
       100% {
@@ -161,10 +150,9 @@ body {
         opacity:1;
       }
   }
-  
-.intro{
-    
+/* code for form  */
 
+.intro{
   height: 50vh;
   position: relative;
 }
@@ -180,11 +168,11 @@ body {
   z-index: -1;
   opacity: 0;
   /* display:none; */
-transition:opacity 0.75s ease-in-out ;
+transition: opacity 0.75s ease-in-out ;
 }
-/* .slideshow-img:first-child{
+.slideshow-img:first-child{
   display:block;
-} */
+}
 
 .message{
 position:absolute;
@@ -193,6 +181,8 @@ color: white;
 font-size: 50px;
 
 }
+
+
 .container{
 
 border: 2px solid gray;
@@ -200,8 +190,141 @@ border-radius: 5px;
 background-color:white;
 }
 
-
+/* code for itinerary  */
+.column1{
+  display: flex;
+}
 
 #info-btm{
   border-bottom: 1px solid silver;
 }
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+/* code for large blue */
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+.button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+
+.button:hover::before, button:focus::before {
+  opacity: 1;
+}
+
+.button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button:hover::after, button:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+/* code for end page */
+.end{
+text-align: center;
+}
+
+/* star code */
+#star-five {
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(35deg);
+  margin-left: auto;
+  margin-right: auto;
+}
+#star-five:before {
+  border-bottom: 80px solid red;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  transform: rotate(-35deg);
+}
+#star-five:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid red;
+  border-left: 100px solid transparent;
+  transform: rotate(-70deg);
+  content: '';
+} 
