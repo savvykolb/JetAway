@@ -1,3 +1,4 @@
+/* main page */
 body {
   
     background-color: #cccccc;
@@ -44,25 +45,13 @@ body {
         font-size: 20px;
       } 
 
-    /* nav ul {
-      display: flex;
-      justify-content: space-between;
-      min-width: 300px;
-      
-
-    }
-    
-    nav a {
-      color: #b9c6ae;
-      font-weight: bold;
-      text-decoration: none;
-      letter-spacing: normal;
-    }
-     */
+ 
     nav a:hover {
       color: #fff;
     }
    
+/* home page */
+
   #title{
     background-image: url("https://res.cloudinary.com/dt84tw7zr/image/fetch/f_auto,q_auto/https://www.gameplan-a.com/wp-content/uploads/fly-images/12131/Team-top-of-the-mountain-climbing-1440x9999.jpg");
     height:100vh;
@@ -118,7 +107,7 @@ body {
   
   
     @keyframes fadeIn {
-      0% {
+      0% { 
         opacity:0;
       }
       100% {
@@ -161,11 +150,9 @@ body {
         opacity:1;
       }
   }
-  /* code for form */
+/* code for form  */
 
 .intro{
-    
-
   height: 50vh;
   position: relative;
 }
@@ -180,8 +167,8 @@ body {
   object-fit: cover;
   z-index: -1;
   opacity: 0;
-  display:none;
-transition:opacity 0.75s ease-in-out ;
+  /* display:none; */
+transition: opacity 0.75s ease-in-out ;
 }
 .slideshow-img:first-child{
   display:block;
@@ -194,6 +181,8 @@ color: white;
 font-size: 50px;
 
 }
+
+
 .container{
 
 border: 2px solid gray;
@@ -201,7 +190,7 @@ border-radius: 5px;
 background-color:white;
 }
 
-/* code for itinerary */
+/* code for itinerary  */
 .column1{
   display: flex;
 }
@@ -214,8 +203,8 @@ background-color:white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
+} 
+/* code for large blue */
 .button {
   min-width: 300px;
   min-height: 60px;
@@ -291,6 +280,8 @@ button:hover::after, button:focus::after {
     opacity: 0;
   }
 }
+
+/* code for end page */
 .end{
 text-align: center;
 }
@@ -336,4 +327,4 @@ text-align: center;
   border-left: 100px solid transparent;
   transform: rotate(-70deg);
   content: '';
-}
+} 
