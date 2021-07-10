@@ -1,6 +1,6 @@
 
 module.exports = function (sequelize, DataTypes) {
-    const userInfo = sequelize.define('userInfo', {
+    const bookingInfo = sequelize.define('bookingInfo', {
         address: {
             type: DataTypes.STRING,
             allowNull:false
@@ -27,13 +27,13 @@ module.exports = function (sequelize, DataTypes) {
         },
     });
 
-    userInfo.associate = function (models) {
-      userInfo.belongsTo(models.User, {
+    bookingInfo.associate = function (models) {
+      bookingInfo.belongsTo(models.User, {
         foreignKey: {
           allowNull: false
         }
       });
     };
 
-    return userInfo;
+    return bookingInfo;
 };

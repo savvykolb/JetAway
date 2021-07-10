@@ -13,8 +13,8 @@ module.exports = function (sequelize, DataTypes) {
       },
     });
     trip.associate = function (models) {
-        trip.hasMany(models.recomendation, {
-      as: 'recomendation'
+        trip.hasMany(models.recommendation, {
+      as: 'recommendation'
         });
       };
     return trip;

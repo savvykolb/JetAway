@@ -1,16 +1,16 @@
 const router = require('express').Router();
-const continentRoutes = require('./continentRoutes');
+const homepageRoutes = require('./homepageRoutes');
 const recommendationRoutes = require('./recommendationRoutes');
 const sessionRoutes = require('./sessionRoutes');
 const tripRoutes = require('./tripRoutes');
 const userRoutes = require('./userRoutes');
-const userInfoRoutes = require('./userInfoRoutes');
+const bookingInfoRoutes = require('./bookingInfoRoutes');
 
-router.use('/continent', continentRoutes);
+router.use('/homepage', homepageRoutes);
 router.use('/recommendation', recommendationRoutes);
 router.use('/session', sessionRoutes);
 router.use('/trip', tripRoutes);
 router.use('/user', userRoutes);
-router.use('/userInfo', userInfoRoutes);
+router.use('/bookingInfo', bookingInfoRoutes);
 
 module.exports = router;

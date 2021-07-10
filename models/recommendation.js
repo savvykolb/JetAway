@@ -1,14 +1,14 @@
 module.exports = function (sequelize, DataTypes) {
-    const recomendation = sequelize.define('recomendation', {
+    const recommendation = sequelize.define('recommendation', {
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
       },
-      reconmendationTxt: {
+      recommendationTxt: {
           type: DataTypes.TEXT
       }
     });
   
-    return recomendation;
+    return recommendation;
   };
