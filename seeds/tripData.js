@@ -23,9 +23,40 @@ module.exports = (db) => {
                             destinationName: 'Israel & Jordan: Deserts & the Dead Sea',
                             description: 'Israel & Jordan—from poppin’ Tel Aviv to the outer reaches of otherworldly deserts—are like no other destination you can dream of. Nothing else can compare to the feeling of standing before good-as-new ancient ruins from a long-lost kingdom in Jordan. Or floating effortlessly across the Dead Sea’s medicinal waters that literally give you life. Or experiencing firsthand the most important religious sites of Judaism, Christianity, and Islam, among others. Or trekking through the desert—be it by camelback or heavy duty all-terrain vehicle (spoiler: you’ll do both). Or stuffing your face with shawarma, and hummus, and baked lamb, and olives, and falafel, and OMG is that baklava? Yes, it is. Or, well… you get it.',
                             continentId: 3
+                        }).then(() => {
+                            db.trip.create({
+                                destinationName: 'NYC: City of Lights',
+                                description: 'It shouldn’t come as a shock that New York is the most visited spot in North America. Offering among the best places in entertainment thanks to the famous Broadway Theater District and shopping and dining districts, the hustle and bustle is one of a kind.',
+                                continentId: 5
+                            }).then(() => {
+                                db.trip.create({
+                                    destinationName: 'US National Parks',
+                                    description: 'If you want to live in the moment, ignite your curiosity, and explore the national parks containing the tallest trees, driest deserts, and colossal-est canyons in the continental U.S.A., then this trip is for you. Experience the best of the west on this 11-day road trip from Salt Lake City to Phoenix.',
+                                    continentId: 5
+                                }).then(() => {
+                                    db.trip.create({
+                                        destinationName: 'Hawaii: Big Island Adventure',
+                                        description: 'Hawaii is one of the world’s most popular island destinations for a reason. It’s the only U.S. state that produces coffee. The only state with a royal palace. And the only place you can swim with dolphins, hike the world’s largest volcano, and relax with a fresh-caught bowl of poké and an ice-cold mai tai…all in one day. So if you want to say “oooh” and “ahhh” and “wow, a double rainbow!” at unprecedented rates, waft permanently mango-scented air, and meet the most laid-back people, Hawaii is the place for you.',
+                                        continentId: 5
+                                    }).then(() => {
+                                        db.trip.create({
+                                            destinationName: 'Canadian Rockies: Banff to Vancouver',
+                                            description: 'Spend nine days exploring the glittering lakes, sky-high peaks, and seaside cities that make up southwest Canada. From rugged Banff National Park to coastal Vancouver, discover the diversity of Canada and why it is simultaneously the hottest and coolest place to be. After hiking past glaciers, lakes, and peaks in Banff, head to the Canadian Rockies for unmatched views of jagged ice-capped peaks. Once you have your fill of fresh air, go west toward Kelowna and Vancouver for a taste of Okanagan wine country and seaport-metropolis living.',
+                                            continentId: 5
+                                        }).then(() => {
+                                            db.trip.create({
+                                                destinationName: 'Alaska: Northern Adventure',
+                                                description: 'They say everything’s bigger in Texas. Well they have clearly never been to Alaska. Sometimes it takes looking at a map to appreciate just how big it truly is (more than double the size of Texas). But Alaska is more than just a big state. It’s the great outdoors served on top of a 23,000-year-old glacier next to a snow-capped mountain with a bald eagle flying into the sunset and a grizzly bear fishing for salmon right behind you. This trip is the adventure of a lifetime. This is U.S. travel like you’ve never seen it.',
+                                                continentId: 5
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
                     });
                 });
             });
         });
-    });
-};
+    };
+;
