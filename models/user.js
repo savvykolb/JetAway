@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     phoneNumber: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       unique: {
         args: true,
       msg: 'User already exists'
