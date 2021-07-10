@@ -52,8 +52,17 @@ if (app.get('env') === 'test') {
 
 db.sequelize.sync(syncOptions).then(() => {
   if (app.get('env') !== 'test' && syncOptions.force) {
+
     require('./seeds/seed')(db);
-    require('./seeds/data')(db);
+    setTimeout(() => {
+      require('./seeds/data')(db);
+    }, 2000);
+
+    setTimeout(() => {
+      require('./seeds/tripData')(db);
+    }, 5000);
+    
+    
   }
 
   app.listen(PORT, () => {

@@ -6,7 +6,7 @@ module.exports = function (sequelize, DataTypes) {
         primaryKey: true
       },
       destinationName: {
-          type: DataTypes.TEXT
+          type: DataTypes.STRING
       },
       description: {
           type: DataTypes.TEXT
