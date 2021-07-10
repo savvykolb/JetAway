@@ -8,8 +8,6 @@
     "lint": "eslint . --ext .js --quiet",
     "fix": "eslint --fix .",
     "test": "npm run lint"
-    
-
   },
   "repository": {
     "type": "git",
@@ -40,6 +38,8 @@
   "homepage": "https://github.com/alperg/project2-starter-auth#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "cloudinary": "^1.26.2",
+    "cloudinary-core": "^2.11.4",
     "connect-session-sequelize": "^7.0.3",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
@@ -48,7 +48,7 @@
     "express-session": "^1.17.1",
     "helmet": "^4.1.1",
     "moment": "^2.29.0",
-    "morgan": "^1.10.0",    
+    "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "nodemon": "^2.0.9",
     "passport": "^0.4.1",
