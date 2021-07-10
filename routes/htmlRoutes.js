@@ -60,11 +60,24 @@ module.exports = (db) => {
   router.get('/', async (req, res) => {
     res.render('homepage');
     });
-
+    router.get('/register', async (req, res) => {
+      res.render('register');
+        });
   router.get('/africa', async (req, res) => {
     res.render('africa');
-      });
-
+      }); 
+  router.get('/itinerary', async (req, res) => {
+        res.render('itinerary');
+          });
+  router.get('/form', async (req, res) => {
+        res.render('form');
+          });
+  router.get('/end', async (req, res) => {
+            res.render('end');
+              });
+  router.get('/homepage', async (req, res) => {
+          res.render('homepage');
+                  });
   // Load example page and pass in an example by id
   router.get('/example/:id', function (req, res) {
     if (req.isAuthenticated()) {
