@@ -98,7 +98,37 @@ module.exports = (db) => {
                                                                                         destinationName: 'London & Paris Escape',
                                                                                         description: 'We’ve all heard that schoolyard rhyme about “seeing London and seeing France.” Laugh if you want, but there’s a lot of merit to doing exactly that. London is a posh playground of medieval history and futuristic skyscrapers, with pubs, parks, and world-class museums. Paris is a wonderland for anyone trying to soak up a little culture—and a lot of wine and cheese. Anyone looking for a jam-packed adventure through two of Europe’s greatest metropolises ought to look no further than this.',
                                                                                         continentId: 1
-                                                                                    })
+                                                                                    }).then(() => {
+                                                                                        db.trip.create({
+                                                                                            destinationName: 'Highlights of Japan',
+                                                                                            description: 'Japan is a country not to be judged by its cover. Sure, this cover happens to have ancient traditions and temples, snow-capped mountains, and abnormally polite citizens that rival any Midwestern state. So what more can there be to love? Oh, only about a million things. As you explore Japan, you’ll find another world taking part below the surface. Talking toilets. Bowing wars. Cuddle cafes. This is a trip to discover the best of both worlds and experience the unexpected.',
+                                                                                            continentId: 2
+                                                                                        }).then(() => {
+                                                                                            db.trip.create({
+                                                                                                destinationName: 'Thailand Getaway',
+                                                                                                description: 'In less time than it would take you to re-watch all the seasons of Friends, you could hit the hotspots of the Thai Islands with some actual friends you’ll make along the way. Yeah, let that sink it. Then, let your toes sink into the white sands, your mouth sink into epic street food, and the island sun sink into your skin…but don’t forget the sunscreen. This trip is sightseeing, meets cultural immersion, meets spicy noodles, meets turquoise waters, meets friendly elephants, meets the best 11 days of your life. This is Thailand.',
+                                                                                                continentId: 2
+                                                                                            }).then(() => {
+                                                                                                db.trip.create({
+                                                                                                    destinationName: 'India: The Golden Triangle',
+                                                                                                    description: 'Not all that glitters is gold, but India’s Golden Triangle doesn’t just glitter. Break out your sunglasses because the trifecta of Delhi, Jaipur, and Agra shines bright. This trip is the Taj Mahal at sunset and yoga (in its birthplace!) at sunrise. It’s peeping for Bengal tigers on a safari, and strolling ancient palaces in eclectic cities. India is unlike any other country you’ve ever experienced before, and it’s about to rock your world, Bollywood-style.',
+                                                                                                    continentId: 2
+                                                                                                }).then(() => {
+                                                                                                    db.trip.create({
+                                                                                                        destinationName: 'Bali: Tropical Escape',
+                                                                                                        description: 'There’s no denying this Indonesian island’s natural beauty, and we’d be crazy not to lead with it. But there’s more to Bali than meets the eye. This trip goes beneath the surface. You’ll discover the complexities of Balinese culture through Hindu traditions, interactions with friendly locals, and adventures at every turn. Bali is diverse. Bali is warm. Bali is an escape from the ordinary.',
+                                                                                                        continentId: 2
+                                                                                                    }).then(() => {
+                                                                                                            db.trip.create({
+                                                                                                                destinationName: 'Australia & New Zealand Adventure',
+                                                                                                                description: 'Chill out on the world’s best beaches before amping up the adrenaline in action sports heaven. Snorkel through shipwrecks, lounge on ship decks and feel the salt-spray and sun rays as you splash through waves. Big cities promise nightlife as wild as the outback, and outdoor adventures are even more extreme with Middle Earth as the backdrop. Whether you want to live it up or lounge in style, there’s something for everyone Down Under.',
+                                                                                                                continentId: 4
+                                                                                                        });
+                                                                                                    });
+                                                                                                });
+                                                                                            });
+                                                                                        });
+                                                                                    });
                                                                                 });
                                                                             });
                                                                         });
@@ -117,6 +147,4 @@ module.exports = (db) => {
                     });
                 });
             });
-        });
-    };
-;
+        })}
