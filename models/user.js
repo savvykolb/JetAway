@@ -21,6 +21,14 @@ module.exports = function (sequelize, DataTypes) {
         msg: 'User already exists'
       }
     },
+    phoneNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      unique: {
+        args: true,
+      msg: 'User already exists'
+      },
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false

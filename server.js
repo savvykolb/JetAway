@@ -22,7 +22,7 @@ if (app.get('env') !== 'test') {
 
 app.use(express.static('public'));
 
-require('./config/passport')(db, app, passport); // pass passport for configuration
+require('./controllers/passport')(db, app, passport); // pass passport for configuration
 
 // Define our routes
 app.use('/api', require('./routes/apiRoutes')(passport, db));
