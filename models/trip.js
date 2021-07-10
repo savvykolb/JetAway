@@ -1,7 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
     const trip = sequelize.define('trip', {
-      text: DataTypes.STRING,
-      description: DataTypes.TEXT,
       id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
