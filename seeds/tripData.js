@@ -48,6 +48,66 @@ module.exports = (db) => {
                                                 destinationName: 'Alaska: Northern Adventure',
                                                 description: 'They say everything’s bigger in Texas. Well they have clearly never been to Alaska. Sometimes it takes looking at a map to appreciate just how big it truly is (more than double the size of Texas). But Alaska is more than just a big state. It’s the great outdoors served on top of a 23,000-year-old glacier next to a snow-capped mountain with a bald eagle flying into the sunset and a grizzly bear fishing for salmon right behind you. This trip is the adventure of a lifetime. This is U.S. travel like you’ve never seen it.',
                                                 continentId: 5
+                                            }).then(() => {
+                                                db.trip.create({
+                                                    destinationName: 'MACHU PICCHU, PERU – SOUTH AMERICA',
+                                                    description: 'Nestled high in the beautiful Andes Mountains, Machu Picchu is South America’s most iconic archeological site sprawling with ancient Inca ruins that draw millions of visitors every year. Jam packed with temples, towers, terraces, walls and more – most of which defy laws of architecture thanks to their mortar-free construction – Machu Picchu isn’t just a cultural hotspot, it’s one of the most breathtaking places in the world.',
+                                                    continentId: 6
+                                                }).then(() => {
+                                                    db.trip.create({
+                                                        destinationName: 'Ecuador & The Galapagos',
+                                                        description: 'Ecuador is four different worlds, straddling two different hemispheres, with one set of islands (re: the Galápagos Islands) that are unlike anywhere else you’ve been. Get closer to giant tortoises and seals than you ever thought possible, climb volcanoes, swim in some of the most picturesque places, and hike through the Amazon Rainforest. It’s Mother Nature meets Animal Planet meets secluded paradise. It’s the feeling you get when you clean your room, take a step back, and it seems like no one has ever lived there—that’s Ecuador and the Galápagos. Untouched. Unbelievable. Unparalleled to anywhere else in the world.',
+                                                        continentId: 6
+                                                    }).then(() => {
+                                                        db.trip.create({
+                                                            destinationName: 'Belize: Rainforests, Reefs & Ruins',
+                                                            description: 'This trip is land, air, and sea to the tropical max. Where else can you zoom through the jungle canopy suspended on a zipline at nearly 50 mph? Or trek inland to San Ignacio to unearth the treasures of Mayan ruins at Xunantunich? And once you’ve caught your breath from flying through the air, and properly observed leg day by climbing the temple stairs: sprawl out on some of the best beaches in the world, tube down a lazy river, snorkel, swim, and splash in the crystal-clear water until the Belizean sea cows come home.',
+                                                            continentId: 6
+                                                        }).then(() => {
+                                                            db.trip.create({
+                                                                destinationName: 'Costa Rica Adventure',
+                                                                description: 'Pura Vida. The unofficial motto of Costa Rica translates to “the simple life.” But it’s less about going off the grid, and more about living a life jam-packed with rainforest hiking, whitewater rafting, ziplining above the clouds, and splashing around coral reefs under the waves. Pura vida is an always optimistic outlook fueled by delicious Mesoamerican-inspired cuisine, the freshest coffee, and the occasional guaro sour cocktail. If you’re looking for all that and a little quality face time with sloths, monkeys, and dolphins, this is the trip for you.',
+                                                                continentId: 6
+                                                            }).then(() => {
+                                                                db.trip.create({
+                                                                    destinationName: 'Patagonia Trek: Chile & Argentina',
+                                                                    description: 'Ever wonder why your favorite outdoorsy clothing brand named themselves after a remote region at the tip of South America? Take one look around this magical place, from the fjords to the glacial lagoons to the towering granite mountains and you’ll see exactly why. And once you’re done looking, start trekking — we’ve got a lot of ground to cover and a lot of places to audibly say “woah” at. So if your boots were made for hiking and you always thought that birds flying south had the right idea, this is the trip for you. Your story begins at the end of the world.',
+                                                                    continentId: 6
+                                                                }).then(() => {
+                                                                    db.trip.create({
+                                                                        destinationName: 'Italy & The Greek Islands',
+                                                                        description: 'Ancient history meets epic parties on Italy and the Greek Islands. See Michelangelo’s David up close and personal in Florence, envision yourself as a Gladiator in the Colosseum of Ancient Rome and travel back in time to where Western Civilization began on the Acropolis of Athens. After all that history, unwind on a white sand beach, drink in hand, on two of Greece’s most iconic islands: Paros and Santorini.',
+                                                                        continentId: 1
+                                                                    }).then(() => {
+                                                                        db.trip.create({
+                                                                            destinationName: 'Grand Tour of Ireland',
+                                                                            description: 'From the Cliffs of Moher and lush green fields of the countryside, to massive urban parks, the Emerald Isle takes beautiful scenery to the next level. But there’s more to Ireland than being really, really, ridiculously good looking. Have a pint at the Guinness Storehouse, feel like royalty atop Blarney Castle, and learn Irish history at every step of the way. At night, the pubs abound with live music to keep the good times going in one of the most photogenic and friendly countries in the world.',
+                                                                            continentId: 1
+                                                                        }).then(() => {
+                                                                            db.trip.create({
+                                                                                destinationName: 'Ibiza, Barcelona and Valencia',
+                                                                                description: 'Everyone knows that Spain is a land where people eat dinner late at night and sleep during the day. But until you actually go and experience it for yourself you can’t know what it feels like to taste patatas bravas on chopitos on albóndigas on chorizo in Barcelona’s tapas bars, or to dance yourself clean to the intoxicating bass music in Ibiza’s legendary night clubs, or to crunch the sand under your feet at one of Valencia’s Mediterranean beaches. So lace up your eating shoes, put on your swankiest swim suit, and start rolling your “r’s.” You’re going to Spain.',
+                                                                                continentId: 1
+                                                                            }).then(() => {
+                                                                                db.trip.create({
+                                                                                    destinationName: 'Hike Europe: The Alps',
+                                                                                    description: 'When you think of Europe, you’re probably thinking old churches, busy shopping streets, and monuments of the past. This trip is none of that. Instead, think walking, hiking, sweating, and breathing heavier than normal through the parts of Europe that not many people get to experience. In just 12 days, you’ll visit three countries, hike through vineyards, by glaciers, and up some of Europe’s most famous mountains. You might even see a cow or two. Because this trip is all about the great outdoors. Where the air is cleaner, the sounds are calming, and you can eat endless amounts of Swiss chocolate (or cheese, for those lunatics that don’t like chocolate) to counteract all the calories you’re going to burn.',
+                                                                                    continentId: 1
+                                                                                }).then(() => {
+                                                                                    db.trip.create({
+                                                                                        destinationName: 'London & Paris Escape',
+                                                                                        description: 'We’ve all heard that schoolyard rhyme about “seeing London and seeing France.” Laugh if you want, but there’s a lot of merit to doing exactly that. London is a posh playground of medieval history and futuristic skyscrapers, with pubs, parks, and world-class museums. Paris is a wonderland for anyone trying to soak up a little culture—and a lot of wine and cheese. Anyone looking for a jam-packed adventure through two of Europe’s greatest metropolises ought to look no further than this.',
+                                                                                        continentId: 1
+                                                                                    })
+                                                                                });
+                                                                            });
+                                                                        });
+                                                                    });
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
                                             });
                                         });
                                     });
