@@ -11,10 +11,21 @@ module.exports = function (sequelize, DataTypes) {
       description: {
           type: DataTypes.TEXT
       },
+      departure: {
+        type: DataTypes.INTEGER
+      },
+      arrival: {
+        type: DataTypes.INTEGER
+      }
     });
     trip.associate = function (models) {
         trip.hasMany(models.recommendation, {
-      as: 'recommendation'
+      onDelete: 'cascade'
+        });
+      };
+    trip.associate = function (models) {
+        trip.hasMany(models.picture, {
+          onDelete: 'cascade'
         });
       };
     return trip;
