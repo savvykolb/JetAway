@@ -65,7 +65,10 @@ db.sequelize.sync(syncOptions).then(() => {
     setTimeout(() => {
       require('./seeds/recommendation')(db);
     }, 6000);
-    
+    setTimeout(() => {
+      require('./seeds/picture')(db);
+      
+    }, 10000);
   }
 
   app.listen(PORT, () => {

@@ -8,10 +8,12 @@ module.exports = function (sequelize, DataTypes) {
         url: {
             type: DataTypes.STRING,
         },
-        alt: {
-            type: DataTypes.STRING,
-        }
+        
     })
-
-    return picture;
+    picture.associate = function (models) {
+        picture.belongsTo(models.trip, {
+      onDelete: 'cascade'
+        });
+      };
+        return picture;
 }
