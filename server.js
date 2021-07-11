@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3333;
 const app = express();
 const db = require('./models');
 
+
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -52,7 +53,17 @@ if (app.get('env') === 'test') {
 
 db.sequelize.sync(syncOptions).then(() => {
   if (app.get('env') !== 'test' && syncOptions.force) {
+
     require('./seeds/seed')(db);
+    setTimeout(() => {
+      require('./seeds/data')(db);
+    }, 2000);
+
+    setTimeout(() => {
+      require('./seeds/tripData')(db);
+    }, 5000);
+    
+    
   }
 
   app.listen(PORT, () => {
