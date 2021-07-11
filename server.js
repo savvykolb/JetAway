@@ -61,7 +61,9 @@ db.sequelize.sync(syncOptions).then(() => {
     setTimeout(() => {
       require('./seeds/tripData')(db);
     }, 5000);
-    
+    setTimeout(() => {
+      require('./seeds/recommendation')(db);
+    }, 6000);
     
   }
 
