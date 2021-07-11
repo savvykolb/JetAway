@@ -5,7 +5,12 @@ module.exports = (db) => {
     }).then(() => {
         db.recommendation.create({
             recommendationTxt: 'Johannesburg Zoo',
-            tripId: 2
-        })
-    })
+            tripId: 1
+        }).then(() => {
+            db.recommendation.create({
+                recommendationTxt: 'Lion Park',
+                tripId: 1
+            })
+        });
+    });
 }

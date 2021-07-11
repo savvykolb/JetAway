@@ -23,10 +23,5 @@ module.exports = function (sequelize, DataTypes) {
       onDelete: 'cascade'
         });
       };
-    trip.associate = function (models) {
-        trip.hasMany(models.picture, {
-          onDelete: 'cascade'
-        });
-      };
     return trip;
   };
