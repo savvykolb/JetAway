@@ -1,36 +1,54 @@
 Africa:
  - JOHANNESBURG, SOUTH AFRICA
-    URL: 
+    URL: https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626020634/johannesburg_qkspuu.jpg
 
  - Highlights of Morocco
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1625943740/morocco_sn9wiy.jpg
+
+
 
 - Kenya: African Safari
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626020849/safari_jj7jbp.jpg
+
+
 
 - Egypt: Cruise the Nile
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626021350/egypt_zqetbb.jpg
+
 
 - Israel & Jordan: Deserts & the Dead Sea
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626021552/jordan_bxvvts.jpg
+
+
+
 
 
 South America:
 
 - MACHU PICCHU, PERU – SOUTH AMERICA
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626024241/peru_c78xqq.jpg
 
 - Ecuador & The Galapagos
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626022566/ecuador_qkcfbk.webp
 
 -Belize: Rainforests, Reefs & Ruins
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626023313/belize1_tlop7w.jpg
+
+
+
 
 - Costa Rica Adventure
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626023913/costa_rica_iyfvg3.jpg
+
+
+
+
 
 - Patagonia Trek: Chile & Argentina
-    URL:
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626023642/chile_metewz.jpg
+
+
+
 
 
 North America:
