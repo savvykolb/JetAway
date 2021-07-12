@@ -120,6 +120,10 @@ a:active { text-decoration: none; }
       -o-animation: fadeIn ease 10s;
       -ms-animation: fadeIn ease 10s;
   }
+
+  #top5 a {
+    color: black;
+  }
   
   /* #line4 a:hover{
     color: rgba(243, 210, 99, 0.993);
