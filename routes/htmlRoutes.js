@@ -22,7 +22,7 @@ module.exports = (db) => {
   //         userInfo: req.session.passport.user,
   //         isloggedin: req.isAuthenticated()
   //       };
-  //       // console.log(user);
+  //       console.log(user);
   //       res.render('profile', user);
   //     });
   //   } else {
@@ -60,7 +60,7 @@ module.exports = (db) => {
   router.get('/', async (req, res) => {
     res.render('homepage');
     });
-    router.get('/register', async (req, res) => {
+   router.get('/register', async (req, res) => {
       res.render('register');
         });
   router.get('/africa', async (req, res) => {
