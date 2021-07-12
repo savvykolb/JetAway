@@ -25,6 +25,15 @@ body {
       
 
       }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { color: rgba(243, 210, 99, 0.993); text-decoration: none; }
+a:active { text-decoration: none; }
       
       nav ul{
         list-style: none;
@@ -50,10 +59,13 @@ body {
 
  
     nav a:hover {
-      color: #fff;
+      color: rgba(243, 210, 99, 0.993);
+      text-decoration: underline;
     }
    
-
+    html {
+      scroll-behavior: smooth;
+    }
 /* home page */
 
   #title{
@@ -109,6 +121,16 @@ body {
       -ms-animation: fadeIn ease 10s;
   }
   
+/*   #line4 a:hover{
+    color: rgba(243, 210, 99, 0.993);
+    padding-bottom:13px;
+    padding-top:17px;
+    padding-left:10px;
+    padding-right:10px;   
+    text-decoration:none;
+    font-weight:bold;
+    font-size:9vh;
+  } */
   
     @keyframes fadeIn {
       0% { 
