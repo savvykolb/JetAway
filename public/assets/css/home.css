@@ -25,6 +25,15 @@ body {
       
 
       }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { color: rgba(243, 210, 99, 0.993); text-decoration: none; }
+a:active { text-decoration: none; }
       
       nav ul{
         list-style: none;
@@ -50,7 +59,8 @@ body {
 
  
     nav a:hover {
-      color: #fff;
+      color: rgba(243, 210, 99, 0.993);
+      text-decoration: underline;
     }
    
 
