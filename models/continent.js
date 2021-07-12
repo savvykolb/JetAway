@@ -1,7 +1,10 @@
-module.exports = function (sequelize, DataTypes) {
-    const continent = sequelize.define('continent', {
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/config');
 
-      id: {
+class continent extends Model {}
+
+continent.init({
+    id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
@@ -14,12 +17,14 @@ module.exports = function (sequelize, DataTypes) {
           type: DataTypes.STRING,
           allownull: false
       },
-    });
-    continent.associate = function (models) {
-        continent.hasMany(models.trip, {
-      as: 'trip'
-        });
-      };
-    return continent;
-  };
-  
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'continent',
+      }
+)
+
+module.exports = continent;

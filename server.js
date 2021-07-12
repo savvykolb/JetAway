@@ -9,7 +9,20 @@ const helmet = require('helmet');
 const PORT = process.env.PORT || 3333;
 const app = express();
 const db = require('./models');
+const sequelize = require('./config/config');
+// const session = require('express-session');
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// const sess = {
+//   secret: 'Super secret secret',
+//   cookie: {},
+//   resave: false,
+//   saveUninitialized: true,
+//   store: new SequelizeStore({
+//     db: sequelize
+//   })
+// };
 
+// app.use(session(sess))
 
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
@@ -43,36 +56,41 @@ if (app.get('env') !== 'development') {
   });
 }
 
-const syncOptions = {
-  force: process.env.FORCE_SYNC === 'true'
-};
+// const syncOptions = {
+//   force: process.env.FORCE_SYNC === 'true'
+// };
 
-if (app.get('env') === 'test') {
-  syncOptions.force = true;
-}
+// if (app.get('env') === 'test') {
+//   syncOptions.force = true;
+// }
 
-db.sequelize.sync(syncOptions).then(() => {
-  if (app.get('env') !== 'test' && syncOptions.force) {
+// db.sequelize.sync(syncOptions).then(() => {
+//   if (app.get('env') !== 'test' && syncOptions.force) {
 
-    require('./seeds/seed')(db);
-    setTimeout(() => {
-      require('./seeds/data')(db);
-    }, 2000);
+//     require('./seeds/seed')(db);
+//     setTimeout(() => {
+//       require('./seeds/data')(db);
+//     }, 2000);
 
-    setTimeout(() => {
-      require('./seeds/tripData')(db);
-    }, 3000);
-    setTimeout(() => {
-      require('./seeds/recommendation')(db);
-    }, 4000);
-    setTimeout(() => {
-      require('./seeds/picture')(db);
-    }, 5000);
-  }
+//     setTimeout(() => {
+//       require('./seeds/tripData')(db);
+//     }, 3000);
+//     setTimeout(() => {
+//       require('./seeds/recommendation')(db);
+//     }, 4000);
+//     setTimeout(() => {
+//       require('./seeds/picture')(db);
+//     }, 5000);
+//   }
 
-  app.listen(PORT, () => {
-    console.log(`App listening on port: ${PORT}`);
-  });
+//   app.listen(PORT, () => {
+//     console.log(`App listening on port: ${PORT}`);
+//   });
+// });
+console.log(db.sequelize)
+sequelize.sync({ force: true }).then(() => {
+  app.listen(PORT, () => console.log('Listening on port %s. Visit http://localhost:%s/ in your browser'));
 });
+
 
 module.exports = app;
