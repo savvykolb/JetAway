@@ -8,7 +8,8 @@ Africa:
 
 
 - Kenya: African Safari
-    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626020849/safari_jj7jbp.jpg
+    URL:https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1625943696/1g2_ts94f2.jpg
+
 
 
 
