@@ -121,16 +121,16 @@ a:active { text-decoration: none; }
       -ms-animation: fadeIn ease 10s;
   }
   
-  #line4 a:hover{
+/*   #line4 a:hover{
     color: rgba(243, 210, 99, 0.993);
-    /* padding-bottom:13px;
+    padding-bottom:13px;
     padding-top:17px;
     padding-left:10px;
-    padding-right:10px;    */
+    padding-right:10px;   
     text-decoration:none;
     font-weight:bold;
     font-size:9vh;
-  }
+  } */
   
     @keyframes fadeIn {
       0% { 
