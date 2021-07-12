@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 
 
 module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define('User', {
+  const user = sequelize.define('user', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       unique: {
         args: true,
-        msg: 'User already exists'
+        msg: 'user already exists'
       } 
     },
     phoneNumber: {
@@ -27,7 +27,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: true,
       unique: {
         args: true,
-      msg: 'User already exists'
+      msg: 'user already exists'
       },
     },
     password: {
@@ -51,19 +51,19 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  User.associate = function (models) {
-    User.hasMany(models.emergencyContact, {
+  user.associate = function (models) {
+    user.hasMany(models.emergencyContact, {
       onDelete: 'cascade'
     });
   };
 
   // This will check if an unhashed password can be compared to the hashed password stored in our database
-  User.prototype.validPassword = function (password) {
+  user.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
   };
 
   // Compares passwords
-  User.prototype.comparePasswords = function (password, callback) {
+  user.prototype.comparePasswords = function (password, callback) {
     bcrypt.compare(password, this.password, (error, isMatch) => {
       if (error) {
         return callback(error);
@@ -72,11 +72,11 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
-  User.prototype.toJSON = function () {
+  user.prototype.toJSON = function () {
     const values = Object.assign({}, this.get());
     delete values.password;
     return values;
   };
 
-  return User;
+  return user;
 };
