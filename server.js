@@ -36,7 +36,25 @@ if (app.get('env') !== 'test') {
 
 app.use(express.static('public'));
 
-require('./controllers/passport')(db, app, passport); // pass passport for configuration
+// PSEUDO Code
+// Issue is the parameters that you're passing into your passport integration attempt
+// I suggest either going through documentation or the examples provided in class
+// right now when you are passing "db" through the method below you are trying to invoke
+// the sequelize method on the passport.js file on a parameter that does not have context for 
+// the connection established in your config file. In addition to that
+// your .env file should be looked at just so that you can make sure that
+// all env properties match properly. You were missing the DB_NAME .env property 
+// earlier which is used to establish a proper connection to your db
+
+// As an aside, considering the time constraints I recommend having a dedicated team working 
+// specifically on functionality given that the only purpose of passport
+// is to have the logged in user verified, you can still get that context
+// with sessionStorage for testing until you get your passport integration sorted out
+// prioritize the pitch functionality of your app, so that you can present it to class
+// and the technical portion is not even a selling point anyway. Have a good presentation
+// ready.
+
+// require('./controllers/passport')(db, app, passport); // pass passport for configuration
 
 // Define our routes
 app.use('/api', require('./routes/apiRoutes')(passport, db));
