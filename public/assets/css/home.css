@@ -236,6 +236,7 @@ background-color:white;
 } 
 /* code for large blue */
 .button {
+  
   min-width: 200px;
   min-height: 60px;
  font-size: 20px;
@@ -251,6 +252,8 @@ background: linear-gradient(90deg, grey 0%, grey 100%);
   cursor: pointer;
   outline: none;
   position: relative;
+
+  
   
   }
 
