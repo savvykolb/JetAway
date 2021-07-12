@@ -43,36 +43,41 @@ if (app.get('env') !== 'development') {
   });
 }
 
-const syncOptions = {
-  force: process.env.FORCE_SYNC === 'true'
-};
+// const syncOptions = {
+//   force: process.env.FORCE_SYNC === 'true'
+// };
 
-if (app.get('env') === 'test') {
-  syncOptions.force = true;
-}
+// if (app.get('env') === 'test') {
+//   syncOptions.force = true;
+// }
 
-db.sequelize.sync(syncOptions).then(() => {
-  if (app.get('env') !== 'test' && syncOptions.force) {
+// db.sequelize.sync(syncOptions).then(() => {
+//   if (app.get('env') !== 'test' && syncOptions.force) {
 
-    require('./seeds/seed')(db);
-    setTimeout(() => {
-      require('./seeds/data')(db);
-    }, 2000);
+//     require('./seeds/seed')(db);
+//     setTimeout(() => {
+//       require('./seeds/data')(db);
+//     }, 2000);
 
-    setTimeout(() => {
-      require('./seeds/tripData')(db);
-    }, 3000);
-    setTimeout(() => {
-      require('./seeds/recommendation')(db);
-    }, 4000);
-    setTimeout(() => {
-      require('./seeds/picture')(db);
-    }, 5000);
-  }
+//     setTimeout(() => {
+//       require('./seeds/tripData')(db);
+//     }, 3000);
+//     setTimeout(() => {
+//       require('./seeds/recommendation')(db);
+//     }, 4000);
+//     setTimeout(() => {
+//       require('./seeds/picture')(db);
+//     }, 5000);
+//   }
 
-  app.listen(PORT, () => {
-    console.log(`App listening on port: ${PORT}`);
-  });
+//   app.listen(PORT, () => {
+//     console.log(`App listening on port: ${PORT}`);
+//   });
+// });
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
+
 
 module.exports = app;

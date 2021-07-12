@@ -1,10 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/config');
 
-class bookingInfo extends Model {}
-
-bookingInfo.init(
-    {
+module.exports = function (sequelize, DataTypes) {
+    const bookingInfo = sequelize.define('bookingInfo', {
         address: {
             type: DataTypes.STRING,
             allowNull:false
@@ -29,14 +25,15 @@ bookingInfo.init(
             type: DataTypes.INTEGER,
             allowNull:false,
         },
-    },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'bookingInfo',
-      }
-);
+    });
 
-module.exports = bookingInfo;
+    bookingInfo.associate = function (models) {
+      bookingInfo.belongsTo(models.User, {
+        foreignKey: {
+          allowNull: false
+        }
+      });
+    };
+
+    return bookingInfo;
+};

@@ -1,82 +1,68 @@
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
+const sequelize = require('../config/config');
 
+class user extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
-module.exports = function (sequelize, DataTypes) {
-  const User = sequelize.define('User', {
+user.init(
+  {
     id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
       autoIncrement: true,
-      primaryKey: true
     },
     firstName: {
-      type: DataTypes.STRING
-    },
+        type: DataTypes.STRING
+      },
     lastName: {
-      type: DataTypes.STRING
-    },
+        type: DataTypes.STRING
+      },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: {
-        args: true,
-        msg: 'User already exists'
-      }
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
     },
     phoneNumber: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      unique: {
-        args: true,
-      msg: 'User already exists'
-      },
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        unique: {
+          args: true,
+        msg: 'User already exists'
+        },
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: [8],
+      },
     },
-    isAdmin: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
-    }
-  }, {
-    timestamps: true,
+  },
+  {
     hooks: {
-      beforeValidate: function (user) {
-        if (user.changed('password')) {
-          return bcrypt.hash(user.password, 10).then((password) => {
-            user.password = password;
-          });
-        }
-      }
-    }
-  });
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        return updatedUserData;
+      },
+    },
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
+  }
+);
 
-  User.associate = function (models) {
-    User.hasMany(models.emergencyContact, {
-      onDelete: 'cascade'
-    });
-  };
-
-  // This will check if an unhashed password can be compared to the hashed password stored in our database
-  User.prototype.validPassword = function (password) {
-    return bcrypt.compareSync(password, this.password);
-  };
-
-  // Compares passwords
-  User.prototype.comparePasswords = function (password, callback) {
-    bcrypt.compare(password, this.password, (error, isMatch) => {
-      if (error) {
-        return callback(error);
-      }
-      return callback(null, isMatch);
-    });
-  };
-
-  User.prototype.toJSON = function () {
-    const values = Object.assign({}, this.get());
-    delete values.password;
-    return values;
-  };
-
-  return User;
-};
+module.exports = User;

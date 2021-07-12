@@ -171,7 +171,8 @@ module.exports = (db) => {
                                                                                                                         "walk through Zion National Park in Utah",
                                                                                                                       tripId: 7,
                                                                                                                     }
-                                                                                                                  );
+                                                                                                                  )
+                                                                                                                  
                                                                                                                 }
                                                                                                               );
                                                                                                           }

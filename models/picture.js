@@ -1,5 +1,10 @@
-module.exports = function (sequelize, DataTypes) {
-    const picture = sequelize.define('picture', {
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/config');
+
+class picture extends Model{}
+
+picture.init(
+    {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
@@ -8,12 +13,14 @@ module.exports = function (sequelize, DataTypes) {
         url: {
             type: DataTypes.STRING,
         },
-        
-    })
-    picture.associate = function (models) {
-        picture.belongsTo(models.trip, {
-      onDelete: 'cascade'
-        });
-      };
-        return picture;
-}
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'picture',
+      }
+)
+
+module.exports = picture;
