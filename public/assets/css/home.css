@@ -120,6 +120,10 @@ a:active { text-decoration: none; }
       -o-animation: fadeIn ease 10s;
       -ms-animation: fadeIn ease 10s;
   }
+
+  #top5 a {
+    color: black;
+  }
   
 /*   #line4 a:hover{
     color: rgba(243, 210, 99, 0.993);
@@ -232,6 +236,7 @@ background-color:white;
 } 
 /* code for large blue */
 .button {
+  
   min-width: 200px;
   min-height: 60px;
  font-size: 20px;
@@ -247,6 +252,8 @@ background: linear-gradient(90deg, grey 0%, grey 100%);
   cursor: pointer;
   outline: none;
   position: relative;
+
+  
   
   }
 
