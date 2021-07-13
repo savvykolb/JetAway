@@ -22,6 +22,9 @@ trip.init(
           arrival: {
             type: DataTypes.INTEGER
           },
+          url: {
+            type: DataTypes.STRING,
+        },
     },
     {
         sequelize,
