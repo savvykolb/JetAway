@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class emergencyContact extends Model {}
+class EmergencyContact extends Model {}
 
-emergencyContact.init(
+EmergencyContact.init(
     {
         firstName: {
             type: DataTypes.STRING
@@ -27,4 +27,4 @@ emergencyContact.init(
       }
 );
 
-module.exports = emergencyContact;
+module.exports = EmergencyContact;

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class continent extends Model {}
+class Continent extends Model {}
 
-continent.init({
+Continent.init({
     id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -27,4 +27,4 @@ continent.init({
       }
 )
 
-module.exports = continent;
+module.exports = Continent;
