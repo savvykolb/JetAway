@@ -12,5 +12,20 @@ Trip.belongsTo(Continent,{
     onDelete:'CASCADE'
 });
 
+Trip.hasMany(Recommendation, {
+    onDelete:'CASCADE'
+});
+
+Recommendation.belongsTo(Trip,{
+    onDelete:'CASCADE'
+});
+
+User.hasMany(BookingInfo, {
+    onDelete:'CASCADE'
+});
+
+BookingInfo.belongsTo(User, {
+    onDelete:'CASCADE'
+});
 
 module.exports = {BookingInfo, Continent, Recommendation, Trip, User}

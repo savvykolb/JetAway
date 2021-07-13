@@ -1,25 +1,25 @@
-// const sequelize = require('../config/connection');
-// const {BookingInfo, Continent, EmergencyContact, Recommendation, Trip, User} = require('../models');
+const sequelize = require('../config/config');
+const {Trip, Continent} = require('../models');
 
-// const userData = require('./userData.json');
-// const projectData = require('./projectData.json');
+const continentData = require('./continentData.json');
+const tripData = require('./tripData.json');
 
-// const seedDatabase = async () => {
-//   await sequelize.sync({ force: true });
+const seedDatabase = async () => {
+  await sequelize.sync({ force: false });
 
-//   const users = await User.bulkCreate(userData, {
-//     individualHooks: true,
-//     returning: true,
-//   });
+  const continent = await Continent.bulkCreate(continentData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-//   for (const project of projectData) {
-//     await Project.create({
-//       ...project,
-//       user_id: users[Math.floor(Math.random() * users.length)].id,
-//     });
-//   }
+  for (const { id } of continent) {
+    const trip = await Trip.bulkCreate(tripData, {
+      individualHooks: true,
+    returning: true,
+    });
+  }
 
-//   process.exit(0);
-// };
+  process.exit(0);
+};
 
-// seedDatabase();
+seedDatabase();
