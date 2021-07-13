@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Continent, Recommendation, Picture, Trip } = require('../models');
+const {  Recommendation, Picture, Trip } = require('../models');
 
 //working on continent route that calls on either ID or name for each continent
 //router.get('/Continent/:id', async (req, res) => {
-
+// add 'Continent' to above const based off what routes we do
 router.get('/africa', async (req, res) => {
     Trip.findAll({
         include: [{model: Recommendation}, {model: Picture}]

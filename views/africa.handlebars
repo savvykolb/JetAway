@@ -1,14 +1,15 @@
 
 <br></br>
+{{#each destinations as |destination|}}
 <div class="card border-secondary mb-3" id="top5"><a href="http://localhost:3333/itinerary">
     <div class="card-header" >
-        Tentative Trip Dates!
+        {{destination.arrival}}
         </div>
-        <img src="https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1625943696/1g2_ts94f2.jpg"href="http://localhost:3333/form" class="card-img-top" alt="..."
+        <img src={{destination.url}}href="http://localhost:3333/form" class="card-img-top" alt="...">
         <div class="card-body text-secondary">
-          <h5 class="card-title">Travel Destination</h5>
-          <p class="card-text">This is the travel destination description. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam alias tenetur, accusamus maxime perspiciatis consequatur debitis vitae vero odit illum ut vel facere explicabo magni recusandae! Voluptatibus quibusdam consequatur magni..</p>
+          <h5 class="card-title">{{destination.destination_name}}</h5>
+          <p class="card-text">{{destination.description}}</p>
           <p class="card-text"><small class="text-muted"> &#x1F464;  # of people already signed up for this trip! </small></p>
         </div>
-      </a></div>
-
+      
+      </a>{{/each}}</div>

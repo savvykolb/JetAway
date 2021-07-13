@@ -1,8 +1,10 @@
 const router = require('express').Router();
 const { bookingInfo } = require('../../models');
 
+
+ // task -- add middleware/auth
 // Book trip Info
-router.post('/', async (req, res) => {
+router.post('/bookingInfo', async (req, res) => {
     try {
       const dbBookingInfoData = await bookingInfo.create({
       address: req.body.address,
@@ -11,6 +13,10 @@ router.post('/', async (req, res) => {
       country: req.body.country,
       zipcode: req.body.zipcode,
       Bday: req.body.Bday,
+      emergencyFirstName: req.body.emergencyFirstName,
+      emergencyLastName: req.body.emergencyLastName,
+      emergencyRelationship: req.body.emergencyRelationship,
+      emergencyPhoneNumber: req.body.emergencyPhoneNumber
         });
          
         req.session.save(() => {
@@ -24,3 +30,5 @@ router.post('/', async (req, res) => {
     });
 
     module.exports = router;
+
+   
