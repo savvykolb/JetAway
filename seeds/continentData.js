@@ -1,4 +1,6 @@
-[
+const { Continent } = require('../models');
+
+const continentData = [
     {
         "continentName": "Europe",
         "timeZone": "idk"
@@ -23,4 +25,8 @@
         "continentName": "South America",
         "timeZone": "idk"
     }
-]
+];
+
+const seedContinents = () => Continent.bulkCreate(continentData);
+
+module.exports = seedContinents
