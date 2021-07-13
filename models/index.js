@@ -1,6 +1,5 @@
 const BookingInfo = require('./bookingInfo');
 const Continent = require('./continent');
-const EmergencyContact = require('./emergencyContact');
 const Recommendation = require('./recommendation');
 const Trip = require('./trip');
 const User = require('./user');
@@ -14,4 +13,4 @@ Trip.belongsTo(Continent,{
 });
 
 
-module.exports = {BookingInfo, Continent, EmergencyContact, Recommendation, Trip, User}
+module.exports = {BookingInfo, Continent, Recommendation, Trip, User}

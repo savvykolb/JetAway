@@ -29,6 +29,18 @@ BookingInfo.init(
             type: DataTypes.INTEGER,
             allowNull:false,
         },
+        emergencyFirstName: {
+            type: DataTypes.STRING
+          },
+        emergencyLastName: {
+            type: DataTypes.STRING
+          },
+        emergencyRelationship: {
+            type: DataTypes.STRING
+          },
+        emergencyPhoneNumber: {
+            type: DataTypes.INTEGER
+          }
     },
     {
         sequelize,
