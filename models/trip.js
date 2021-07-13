@@ -1,20 +1,23 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class trip extends Model {}
+class Trip extends Model {}
 
-trip.init(
+Trip.init(
     {
         id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
           },
-          destinationName: {
-              type: DataTypes.STRING
+          destination_name: {
+            type: DataTypes.STRING
+          },
+          url: {
+            type: DataTypes.STRING,
           },
           description: {
-              type: DataTypes.TEXT
+            type: DataTypes.TEXT
           },
           departure: {
             type: DataTypes.INTEGER
@@ -22,9 +25,7 @@ trip.init(
           arrival: {
             type: DataTypes.INTEGER
           },
-          url: {
-            type: DataTypes.STRING,
-        },
+         
     },
     {
         sequelize,
@@ -35,4 +36,4 @@ trip.init(
       }
 );
 
-module.exports = trip;
+module.exports = Trip;

@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class bookingInfo extends Model {}
+class BookingInfo extends Model {}
 
-bookingInfo.init(
+BookingInfo.init(
     {
         address: {
             type: DataTypes.STRING,
@@ -39,4 +39,4 @@ bookingInfo.init(
       }
 );
 
-module.exports = bookingInfo;
+module.exports = BookingInfo;

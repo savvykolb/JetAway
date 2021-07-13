@@ -1,17 +1,17 @@
-const bookingInfo = require('./bookingInfo');
-const continent = require('./continent');
-const emergencyContact = require('./emergencyContact');
-const recommendation = require('./recommendation');
-const trip = require('./trip');
-const user = require('./user');
+const BookingInfo = require('./bookingInfo');
+const Continent = require('./continent');
+const EmergencyContact = require('./emergencyContact');
+const Recommendation = require('./recommendation');
+const Trip = require('./trip');
+const User = require('./user');
 
-continent.hasMany(trip,{
+Continent.hasMany(Trip,{
     onDelete:'CASCADE'
 });
 
-trip.belongsTo(continent,{
+Trip.belongsTo(Continent,{
     onDelete:'CASCADE'
 });
 
 
-module.exports = {bookingInfo, continent, emergencyContact, recommendation, trip, user}
+module.exports = {BookingInfo, Continent, EmergencyContact, Recommendation, Trip, User}
