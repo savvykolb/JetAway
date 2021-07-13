@@ -1,6 +1,6 @@
+const { Trip } = require('../models');
 
-
-[
+const tripData = [
     {
       "destination_name": "JOHANNESBURG, SOUTH AFRICA",
       "url": "https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626020634/johannesburg_qkspuu.jpg",
@@ -87,7 +87,7 @@
   
     {
         "destination_name": "MACHU PICCHU, PERU – SOUTH AMERICA",
-        "urk":"https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626024241/peru_c78xqq.jpg",
+        "url":"https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626024241/peru_c78xqq.jpg",
         "description": "Nestled high in the beautiful Andes Mountains, Machu Picchu is South America’s most iconic archeological site sprawling with ancient Inca ruins that draw millions of visitors every year. Jam packed with temples, towers, terraces, walls and more – most of which defy laws of architecture thanks to their mortar-free construction – Machu Picchu isn’t just a cultural hotspot, it’s one of the most breathtaking places in the world.",
         "departure":"1",
         "arrival":"2",
@@ -205,5 +205,8 @@
       "continent_id": 4
     }
     
-  ]
+  ];
 
+  const seedTrips = () => Trip.bulkCreate(tripData);
+
+module.exports = seedTrips
