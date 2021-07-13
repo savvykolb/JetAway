@@ -1,71 +1,16 @@
 const router = require('express').Router();
 const { Trip, Continent } = require('../models');
-const seedTrips = require('../seeds/tripData.js');
-const tripData = require('../seeds/tripData.js');
-
-// module.exports = (db) => {
-  // Load register page
-  // router.get('/register', (req, res) => {
-  //   if (req.isAuthenticated()) {
-  //     res.redirect('/profile');
-  //   } else {
-  //     res.render('register');
-  //   }
-  // });
-
-  // // Load profile page
-  // router.get('/profile', (req, res) => {
-  //   if (req.isAuthenticated()) {
-  //     db.User.findOne({
-  //       where: {
-  //         id: req.session.passport.user.id
-  //       }
-  //     }).then(() => {
-  //       const user = {
-  //         userInfo: req.session.passport.user,
-  //         isloggedin: req.isAuthenticated()
-  //       };
-  //       console.log(user);
-  //       res.render('profile', user);
-  //     });
-  //   } else {
-  //     res.redirect('/');
-  //   }
-  // });
-
-  // // Load dashboard page
-  // router.get('/', (req, res) => {
-  //   if (req.isAuthenticated()) {
-  //     const user = {
-  //       user: req.session.passport.user,
-  //       isloggedin: req.isAuthenticated()
-  //     };
-  //     res.render('dashboard', user);
-  //   } else {
-  //     res.render('dashboard');
-  //   }
-  // });
-
-  // // Load dashboard page
-  // router.get('/dashboard', (req, res) => {
-  //   if (req.isAuthenticated()) {
-  //     const user = {
-  //       user: req.session.passport.user,
-  //       isloggedin: req.isAuthenticated()
-  //     };
-  //     res.render('dashboard', user);
-  //   } else {
-  //     res.render('dashboard');
-  //   }
-  // });
 
   // Load HOME PAGE
   router.get('/', async (req, res) => {
     res.render('homepage');
     });
-  //  router.get('/register', async (req, res) => {
-  //     res.render('register');
-  //       });
+ 
+    // We are needing to render data to the Travel Destination page by continent id dependent on what continent the user clicks.
+    // 1. Right now, we have it pulling data into the console log with the exception of the continent id (not sure why that isnt pulling too).
+    //2. Our hdlbrs for africa page are not correct in displaying the pulled data. The route shows only main hndlbars => no africa.handlebars content is showing. 
+    
+
   router.get('/africa', async (req, res) => {
     const tripData = await Trip.findAll().catch((err) => {
       res.join(err);
@@ -75,53 +20,6 @@ const tripData = require('../seeds/tripData.js');
     console.log('ITS WORKING!!!!', destination)
       }); 
 
-      
-//  router.get('/europe', async (req, res) => {
-//     res.render('europe');
-//       });
-  // router.get('/itinerary', async (req, res) => {
-  //       res.render('itinerary');
-  //         });
-  // router.get('/form', async (req, res) => {
-  //       res.render('form');
-  //         });
-  // router.get('/end', async (req, res) => {
-  //           res.render('end');
-  //             });
-  // router.get('/homepage', async (req, res) => {
-  //         res.render('homepage');
-  //                 });
-  // Load example page and pass in an example by id
-  // router.get('/example/:id', function (req, res) {
-  //   if (req.isAuthenticated()) {
-  //     db.Example.findOne({ where: { id: req.params.id }, raw: true }).then(function (dbExample) {
-  //       res.render('example-detail', {
-  //         userInfo: req.session.passport.user,
-  //         isloggedin: req.isAuthenticated(),
-  //         example: dbExample
-  //       });
-  //     });
-  //   } else {
-  //     res.redirect('/');
-  //   }
-  // });
-
-  // Logout
-  // router.get('/logout', (req, res, next) => {
-  //   req.logout();
-  //   req.session.destroy((err) => {
-  //     if (err) {
-  //       return next(err);
-  //     }
-  //     res.clearCookie('connect.sid', { path: '/' });
-  //     res.redirect('/');
-  //   });
-  // });
-
-  // Render 404 page for any unmatched routes
-  // router.get('*', function (req, res) {
-  //   res.render('404');
-  // });
 
 // Create new user
 router.post('/', async (req, res) => {
