@@ -9,12 +9,13 @@ const { North } = require('../models');
     res.render('homepage');
     });
  
-    router.get('/itinerary', async (req, res) => {
-      res.render('itinerary');
-      });
+    // router.get('//:id', async (req, res) => {
+    //   res.render('itinerary');
+    //   });
+    
     // We are needing to render data to the Travel Destination page by continent id dependent on what continent the user clicks.
     // 1. Right now, we have it pulling data into the console log with the exception of the continent id (not sure why that isnt pulling too).
-    //2. Our hdlbrs for africa page are not correct in displaying the pulled data. The route shows only main hndlbars => no africa.handlebars content is showing. 
+    //2. Our hdlbrs for africa page are not correct in displaying the pulled data. The route shows only main handlebars => no africa.handlebars content is showing. 
 
 
   router.get('/africa', async (req, res) => {
@@ -25,6 +26,62 @@ const { North } = require('../models');
     res.render('africa', { destination });
     console.log('ITS WORKING!!!!', destination)
       }); 
+
+      router.get('/itinerary/:id', async (req, res) => {
+        const europeData = await Africa.find().catch((err) => {
+          res.join(err);
+        });
+        const destination = europeData.map((europe) => europe.get({ plain: true }));
+        res.render('itinerary', { destination });
+        console.log('ITS WORKING!!!!', destination)
+          }); 
+
+
+          
+          router.get('/itinerary/:id', async (req, res) => {
+            const africaData = await Africa.findAll().catch((err) => {
+              res.join(err);
+            });
+            const destination = africaData.map((africa) => africa.get({ plain: true }));
+            res.render('itinerary', { destination });
+            console.log('ITS WORKING!!!!', destination)
+              }); 
+    
+      // router.get('/itinerary/:id', async (req, res) => {
+      //   const africaData = await Africa.fin().catch((err) => {
+      //     res.join(err);
+      //   });
+      //   const destination = africaData.map((africa) => africa.get({ plain: true }));
+      //   res.render('itinerary', { destination });
+      // router.get('/itinerary/:id', async (req, res) => {
+      //   try {
+      //     const sameData = await Africa.findByPk(req.params.id, {
+          
+      //     });
+      
+      //     const destination = sameData.get({ plain: true });
+      //     res.render('itinerary', { destination });
+      //   } catch (err) {
+      //     console.log(err);
+      //     res.status(500).json(err);
+      //   }
+      // });      //   console.log('ITS WORKING!!!!', destination)
+      //     });
+
+
+
+
+      // practice//
+  // router.get('/itinerary/:id', async (req, res) => {
+  //       try {
+  //         const someData = await Africa.findByPk({ where: { destination_name: req.body.destination_name } });
+  //         res.render('itinerary', { destination });
+  //         console.log('thisssss!!!!', someData);
+  //       } catch (err) {
+  //         res.status(400).json(err);
+  //       }
+  //       });
+      
 
       router.get('/asia', async (req, res) => {
         const asiaData = await Asia.findAll().catch((err) => {
@@ -63,8 +120,7 @@ const { North } = require('../models');
         console.log('ITS WORKING!!!!', destination)
           }); 
  
-      
-          
+       
       router.get('/north', async (req, res) => {
         const northData = await North.findAll().catch((err) => {
           res.join(err);
