@@ -16,7 +16,7 @@ Continent.hasMany(Trip,{
 });
 
 Trip.belongsTo(Continent,{
-    foreignKey: 'continent_id',
+    // foreignKey: 'continent_id',
     onDelete:'CASCADE'
 });
 
@@ -67,7 +67,7 @@ North.hasMany(Recommendation, {
 });
 
 Recommendation.belongsTo(Trip,{
-    foreignKey: 'trip_id',
+    // foreignKey: 'trip_id',
     onDelete:'CASCADE'
 });
 
