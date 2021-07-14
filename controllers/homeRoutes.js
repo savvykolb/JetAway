@@ -15,10 +15,25 @@ const { North } = require('../models');
   });
 
      
+  //end session 
   router.get('/end', async (req, res) => {
     res.render('end');
     });
   
+    //return to homepage at the end screen
+  router.get('/homepage', async (req, res) => {
+    res.render('homepage');
+  });
+
+    //check to see if created account prior to booking, otherwise, create an account
+  router.get('/register', (req, res) => {
+    if (req.isAuthenticated()) {
+      res.redirect('/booknow')
+    } else {
+      res.render('register')
+    }
+  })
+
 
     
 
