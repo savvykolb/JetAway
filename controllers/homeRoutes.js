@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Trip, Continent } = require('../models');
+const { Trip,Continent } = require('../models');
+const { Asia, Africa, Australia, North, South, Europe } = require('../models');
 
   // Load HOME PAGE
   router.get('/', async (req, res) => {
@@ -12,15 +13,65 @@ const { Trip, Continent } = require('../models');
     
 
   router.get('/africa', async (req, res) => {
-    const tripData = await Trip.findAll().catch((err) => {
+    const africaData = await Africa.findAll().catch((err) => {
       res.join(err);
     });
-    const destination = tripData.map((trip) => trip.get({ plain: true }));
+    const destination = africaData.map((africa) => africa.get({ plain: true }));
     res.render('africa', { destination });
     console.log('ITS WORKING!!!!', destination)
       }); 
 
+      router.get('/asia', async (req, res) => {
+        const asiaData = await Asia.findAll().catch((err) => {
+          res.join(err);
+        });
+        const destination = asiaData.map((asia) => asia.get({ plain: true }));
+        res.render('africa', { destination });
+        console.log('ITS WORKING!!!!', destination)
+          }); 
 
+   
+      router.get('/australia', async (req, res) => {
+        const australiaData = await Australia.findAll().catch((err) => {
+          res.join(err);
+        });
+        const destination = australiaData.map((australia) => australia.get({ plain: true }));
+        res.render('africa', { destination });
+        console.log('ITS WORKING!!!!', destination)
+          }); 
+
+     router.get('/south', async (req, res) => {
+       const southData = await South.findAll().catch((err) => {
+           res.join(err);
+            });
+       const destination = southData.map((south) => south.get({ plain: true }));
+       res.render('africa', { destination });
+       console.log('ITS WORKING!!!!', destination)
+              }); 
+      
+      router.get('/europe', async (req, res) => {
+        const europeData = await Europe.findAll().catch((err) => {
+          res.join(err);
+        });
+        const destination = europeData.map((europe) => europe.get({ plain: true }));
+        res.render('africa', { destination });
+        console.log('ITS WORKING!!!!', destination)
+          }); 
+ 
+      
+          
+      router.get('/north', async (req, res) => {
+        const northData = await North.findAll().catch((err) => {
+          res.join(err);
+        });
+        const destination = northData.map((north) => north.get({ plain: true }));
+        res.render('africa', { destination });
+        console.log('ITS WORKING!!!!', destination)
+          }); 
+
+
+
+    
 // Create new user
 router.post('/', async (req, res) => {
   try {
