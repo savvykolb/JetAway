@@ -20,10 +20,10 @@ North.init(
             type: DataTypes.TEXT
           },
           departure: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
           },
           arrival: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
           },
           
          

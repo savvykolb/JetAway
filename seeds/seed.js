@@ -6,8 +6,8 @@ const seedNorth = require('./northData');
 //checked
 const seedSouth = require('./southData');
 const seedAustralia = require('./australiaData');
-const seedContinents = require('./continentData')
-const seedRecommendation = require('./recommendationData')
+// const seedContinents = require('./continentData')
+// const seedRecommendation = require('./recommendationData')
 const sequelize = require('../config/config');
 
 
@@ -23,22 +23,22 @@ const seedDatabase = async () => {
 //     console.log('\n----- CONTINENTS SEEDED -----\n');
 
     await seedEurope();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- EUROPE SEEDED -----\n');
 
     await seedNorth();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- NORTH SEEDED -----\n');
 
     await seedSouth();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- SOUTH SEEDED -----\n');
 
     await seedAustralia();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- AUSTRALIA SEEDED -----\n');
 
     await seedAfrica();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- AFRICA SEEDED -----\n');
 
     await seedAsia();
-    console.log('\n----- TRIPS SEEDED -----\n');
+    console.log('\n----- ASIA SEEDED -----\n');
     
     await seedTrips();
     console.log('\n----- TRIPS SEEDED -----\n');
