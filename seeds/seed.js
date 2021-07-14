@@ -3,6 +3,7 @@ const seedAsia = require('./asiaData');
 const seedEurope = require('./europeData');
 const seedAfrica = require('./africaData');
 const seedNorth = require('./northData');
+//checked
 const seedSouth = require('./southData');
 const seedAustralia = require('./australiaData');
 const seedContinents = require('./continentData')
@@ -14,9 +15,12 @@ const sequelize = require('../config/config');
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
+// const seedDatabase = async () => {
+//     await sequelize.sync({ force: true });
+//     console.log('\n----- DATABASE SYNCED -----\n');
 
-    await seedContinents();
-    console.log('\n----- CONTINENTS SEEDED -----\n');
+//     await seedContinents();
+//     console.log('\n----- CONTINENTS SEEDED -----\n');
 
     await seedEurope();
     console.log('\n----- TRIPS SEEDED -----\n');
@@ -39,18 +43,37 @@ const seedDatabase = async () => {
     await seedTrips();
     console.log('\n----- TRIPS SEEDED -----\n');
 
-    await seedRecommendation();
-    console.log('\n----- RECOMMENDATION SEEDED -----\n');
+//     await seedRecommendation();
+//     console.log('\n----- RECOMMENDATION SEEDED -----\n');
     
     process.exit(0);
 };
 
+
+// const seedDatabase = () =>{
+//     sequelize.sync({ force: true });
+//     console.log('\n----- DATABASE SYNCED -----\n');
+    
+//     setTimeout(() => {
+//         seedContinents();
+//         console.log('\n----- CONTINENTS SEEDED -----\n');
+        
+//     }, 1000);
+    
+//     setTimeout(() => {
+//         seedTrips();
+//         console.log('\n----- TRIPS SEEDED -----\n');
+        
+//     }, 2000);
+    
+//     setTimeout(() => {
+//         seedRecommendation();
+//         console.log('\n----- RECOMMENDATION SEEDED -----\n');
+        
+//     }, 3000 );
+// }
+
 seedDatabase();
-
-
-
-
-
 
 // const {Trip, Continent} = require('../models');
 
