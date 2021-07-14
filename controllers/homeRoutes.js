@@ -8,7 +8,6 @@ const { North } = require('../models');
   router.get('/', async (req, res) => {
     res.render('homepage');
     });
- 
   
 // Display destinations by continents 
     //Africa
@@ -61,6 +60,7 @@ const { North } = require('../models');
           }); 
     
     //North America
+
       router.get('/north', async (req, res) => {
         const northData = await North.findAll().catch((err) => {
           res.join(err);
@@ -71,6 +71,62 @@ const { North } = require('../models');
           }); 
 
 //Display Itinerary Page by Individual Distination
+
+
+//       router.get('/itinerary/:id', async (req, res) => {
+//         const europeData = await Africa.find().catch((err) => {
+//           res.join(err);
+//         });
+//         const destination = europeData.map((europe) => europe.get({ plain: true }));
+//         res.render('itinerary', { destination });
+//         console.log('ITS WORKING!!!!', destination)
+//           }); 
+
+
+          
+//           router.get('/itinerary/:id', async (req, res) => {
+//             const africaData = await Africa.findAll().catch((err) => {
+//               res.join(err);
+//             });
+//             const destination = africaData.map((africa) => africa.get({ plain: true }));
+//             res.render('itinerary', { destination });
+//             console.log('ITS WORKING!!!!', destination)
+//               }); 
+    
+      // router.get('/itinerary/:id', async (req, res) => {
+      //   const africaData = await Africa.fin().catch((err) => {
+      //     res.join(err);
+      //   });
+      //   const destination = africaData.map((africa) => africa.get({ plain: true }));
+      //   res.render('itinerary', { destination });
+      // router.get('/itinerary/:id', async (req, res) => {
+      //   try {
+      //     const sameData = await Africa.findByPk(req.params.id, {
+          
+      //     });
+      
+      //     const destination = sameData.get({ plain: true });
+      //     res.render('itinerary', { destination });
+      //   } catch (err) {
+      //     console.log(err);
+      //     res.status(500).json(err);
+      //   }
+      // });      //   console.log('ITS WORKING!!!!', destination)
+      //     });
+
+
+
+      // practice//
+  // router.get('/itinerary/:id', async (req, res) => {
+  //       try {
+  //         const someData = await Africa.findByPk({ where: { destination_name: req.body.destination_name } });
+  //         res.render('itinerary', { destination });
+  //         console.log('thisssss!!!!', someData);
+  //       } catch (err) {
+  //         res.status(400).json(err);
+  //       }
+  //       });
+      
 
   // router.get('/itinerary', async (req, res) => {
   // res.render('itinerary');
@@ -103,19 +159,19 @@ const { North } = require('../models');
   // })
     
 
-  router.get('/destination/:lookupName', async (req, res) => {
-    try {
-      const destinationData = await Africa.findOne({
-        where: {
-          lookupName: req.params.lookupName
-        }
-      },
-      res.render.json(destinationData));
-      console.log('destinationData:', destinationData)
-      }catch (err) {
-        res.status(500).json(err);
-      }
-    }),
+//   router.get('/destination/:lookupName', async (req, res) => {
+//     try {
+//       const destinationData = await Africa.findOne({
+//         where: {
+//           lookupName: req.params.lookupName
+//         }
+//       },
+//       res.render.json(destinationData));
+//       console.log('destinationData:', destinationData)
+//       }catch (err) {
+//         res.status(500).json(err);
+//       }
+//     }),
 
 
 // Create new user
@@ -168,30 +224,6 @@ router.post('/login', async (req, res) => {
 });
 
 //end of user
-
-
-  // router.get('/africa', async (req, res) => {
-  //   try {
-  //     const africaResults = await Trip.findAll({
-  //     include: [
-  //       {
-  //         // model: Trip,
-  //         attributes: ['destination_name', 'url', 'description', 'departure', 'arrival'],
-  //       },
-  //     ]
-  //   })
-  //     const newResults = africaResults.map((result) =>
-  //     result.get({ plain: true })
-  //     );
-  //     console.log('FIND ME!!!!!!!', newResults)
-  //     res.render('africa', {
-  //       newResults,
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // });
-
 
 
 
