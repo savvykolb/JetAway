@@ -6,10 +6,13 @@ const { Trip, Continent } = require('../models');
     res.render('homepage');
     });
  
+    router.get('/itinerary', async (req, res) => {
+      res.render('itinerary');
+      });
     // We are needing to render data to the Travel Destination page by continent id dependent on what continent the user clicks.
     // 1. Right now, we have it pulling data into the console log with the exception of the continent id (not sure why that isnt pulling too).
     //2. Our hdlbrs for africa page are not correct in displaying the pulled data. The route shows only main hndlbars => no africa.handlebars content is showing. 
-    
+
 
   router.get('/africa', async (req, res) => {
     const tripData = await Trip.findAll().catch((err) => {
