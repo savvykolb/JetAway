@@ -4,7 +4,7 @@ const { bookingInfo } = require('../../models');
 
  // task -- add middleware/auth
 // Book trip Info
-router.post('/bookingInfo', async (req, res) => {
+router.post('/form', async (req, res) => {
     try {
       const dbBookingInfoData = await bookingInfo.create({
       address: req.body.address,
