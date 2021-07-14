@@ -1,8 +1,20 @@
 const seedTrips = require('./tripData');
+const seedAsia = require('./asiaData');
+const seedEurope = require('./europeData');
+const seedAfrica = require('./africaData');
+const seedNorth = require('./northData');
+//checked
+const seedSouth = require('./southData');
+const seedAustralia = require('./australiaData');
 const seedContinents = require('./continentData')
 const seedRecommendation = require('./recommendationData')
 const sequelize = require('../config/config');
 
+
+
+const seedDatabase = async () => {
+    await sequelize.sync({ force: true });
+    console.log('\n----- DATABASE SYNCED -----\n');
 // const seedDatabase = async () => {
 //     await sequelize.sync({ force: true });
 //     console.log('\n----- DATABASE SYNCED -----\n');
@@ -10,38 +22,56 @@ const sequelize = require('../config/config');
 //     await seedContinents();
 //     console.log('\n----- CONTINENTS SEEDED -----\n');
 
-//     await seedTrips();
-//     console.log('\n----- TRIPS SEEDED -----\n');
+    await seedEurope();
+    console.log('\n----- TRIPS SEEDED -----\n');
+
+    await seedNorth();
+    console.log('\n----- TRIPS SEEDED -----\n');
+
+    await seedSouth();
+    console.log('\n----- TRIPS SEEDED -----\n');
+
+    await seedAustralia();
+    console.log('\n----- TRIPS SEEDED -----\n');
+
+    await seedAfrica();
+    console.log('\n----- TRIPS SEEDED -----\n');
+
+    await seedAsia();
+    console.log('\n----- TRIPS SEEDED -----\n');
+    
+    await seedTrips();
+    console.log('\n----- TRIPS SEEDED -----\n');
 
 //     await seedRecommendation();
 //     console.log('\n----- RECOMMENDATION SEEDED -----\n');
     
-//     process.exit(0);
-// };
+    process.exit(0);
+};
 
 
-const seedDatabase = () =>{
-    sequelize.sync({ force: true });
-    console.log('\n----- DATABASE SYNCED -----\n');
+// const seedDatabase = () =>{
+//     sequelize.sync({ force: true });
+//     console.log('\n----- DATABASE SYNCED -----\n');
     
-    setTimeout(() => {
-        seedContinents();
-        console.log('\n----- CONTINENTS SEEDED -----\n');
+//     setTimeout(() => {
+//         seedContinents();
+//         console.log('\n----- CONTINENTS SEEDED -----\n');
         
-    }, 1000);
+//     }, 1000);
     
-    setTimeout(() => {
-        seedTrips();
-        console.log('\n----- TRIPS SEEDED -----\n');
+//     setTimeout(() => {
+//         seedTrips();
+//         console.log('\n----- TRIPS SEEDED -----\n');
         
-    }, 2000);
+//     }, 2000);
     
-    setTimeout(() => {
-        seedRecommendation();
-        console.log('\n----- RECOMMENDATION SEEDED -----\n');
+//     setTimeout(() => {
+//         seedRecommendation();
+//         console.log('\n----- RECOMMENDATION SEEDED -----\n');
         
-    }, 3000 );
-}
+//     }, 3000 );
+// }
 
 seedDatabase();
 

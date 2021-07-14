@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/config");
 
-class recommendation extends Model {}
+class Recommendation extends Model {}
 
-recommendation.init({
+Recommendation.init({
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -22,4 +22,4 @@ recommendation.init({
   }
 );
 
-module.exports = recommendation;
+module.exports = Recommendation;
