@@ -1,15 +1,15 @@
 
-<br></br>
-{{#each destinations as |destination|}}
-<div class="card border-secondary mb-3" id="top5"><a href="http://localhost:3333/itinerary">
+{{#each destination as |destination|}}
+
+<div class="card" id="top5"><a href="http://localhost:3333/itinerary">
     <div class="card-header" >
         {{destination.arrival}}
         </div>
-        <img src={{destination.url}}href="http://localhost:3333/form" class="card-img-top" alt="...">
+        <img src={{destination.url}} class="card-img-top" alt="...">
         <div class="card-body text-secondary">
           <h5 class="card-title">{{destination.destination_name}}</h5>
           <p class="card-text">{{destination.description}}</p>
           <p class="card-text"><small class="text-muted"> &#x1F464;  # of people already signed up for this trip! </small></p>
         </div>
-      
       </a>{{/each}}</div>
+     
