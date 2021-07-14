@@ -1,9 +1,9 @@
 drop database if exists project2_dev;
 create database project2_dev;
 use project2_dev;
-SELECT * FROM Examples;
-SELECT * FROM Users;
-SELECT * FROM userInfos;
-SELECT * FROM continents;
-SELECT * FROM trips;
-SELECT * FROM recomendations;
+
+SELECT * FROM user;
+SELECT * FROM bookingInfo;
+SELECT * FROM continent;
+SELECT * FROM trip;
+SELECT * FROM recommendation;
