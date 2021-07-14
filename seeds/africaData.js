@@ -5,7 +5,7 @@ const africaData = [
       "destination_name": "JOHANNESBURG, SOUTH AFRICA",
       "lookupName": "Johannesburg",
       "url": "https://res.cloudinary.com/dw8zecnb1/image/upload/c_fill,g_auto,h_250,w_970/v1626020634/johannesburg_qkspuu.jpg",
-        "description": "Johannesburg is the biggest city in South Africa and the most visited in all the safari land of the continent. Boosting 40+ art galleries and studios, Johannesburg is a great place for travelers looking to immerse themselves in culture.",
+        "description": "Johannesburg is the biggest city in South Africa and the most visited in all the safari land of the continent. Boosting 40+ art galleries and studios, Johannesburg is a great place for travelers looking to immerse themselves in culture. On this adventure, you will get to explore the UNESCO-listed archeological areas, hang out with the animals at the famous Johannesburg zoo, get to see some lions at Lion Park, take a trip back in time at the Mandela House, and so much more!!",
         "departure":"08/16/2021",
         "arrival":"08/26/2021",
         

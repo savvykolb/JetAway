@@ -103,19 +103,19 @@ const { North } = require('../models');
   // })
     
 
-  router.get('/destination/:lookupName', async (req, res) => {
-    try {
-      const destinationData = await Africa.findOne({
-        where: {
-          lookupName: req.params.lookupName
-        }
-      },
-      res.render.json(destinationData));
-      console.log('destinationData:', destinationData)
-      }catch (err) {
-        res.status(500).json(err);
-      }
-    }),
+  // router.get('/destination/:lookupName', async (req, res) => {
+  //   try {
+  //     const destinationData = await Africa.findOne({
+  //       where: {
+  //         lookupName: req.params.lookupName
+  //       }
+  //     },
+  //     res.render.json(destinationData));
+  //     console.log('destinationData:', destinationData)
+  //     }catch (err) {
+  //       res.status(500).json(err);
+  //     }
+  //   }),
 
 
 // Create new user
