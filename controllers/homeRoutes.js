@@ -8,16 +8,20 @@ const { North } = require('../models');
     res.render('homepage');
     });
   
+
 // Display Book Now Route
   router.get('/booknow', async (req, res) => {
   res.render('booknow');
   });
+
      
   router.get('/end', async (req, res) => {
     res.render('end');
     });
   
+
     
+
 // Display destinations by continents 
     //Africa
       router.get('/africa', async (req, res) => {
