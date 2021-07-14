@@ -8,6 +8,14 @@ const { North } = require('../models');
     res.render('homepage');
     });
   
+  router.get('/form', async (req, res) => {
+    res.render('form');
+    });
+     
+  router.get('/end', async (req, res) => {
+    res.render('end');
+    });
+  
 // Display destinations by continents 
     //Africa
       router.get('/africa', async (req, res) => {
