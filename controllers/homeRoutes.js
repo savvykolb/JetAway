@@ -1,14 +1,46 @@
 const router = require('express').Router();
+const { User } = require('../models');
 const { Asia, Africa, Australia, South, Europe } = require('../models');
 const { North } = require('../models');
-
+const withAuth = require('../utils/auth');
 
 // Load HOME PAGE
-  router.get('/', async (req, res) => {
-    res.render('homepage');
+  // router.get('/', async (req, res) => {
+  //   res.render('homepage');
+  //   });
+// sends them to log in first
+    router.get('/', withAuth, async (req, res) => {
+      try {
+        const userData = await User.findAll({
+          attributes: { exclude: ['password'] },
+          order: [['name', 'ASC']],
+        });
+    
+        const users = userData.map((project) => project.get({ plain: true }));
+    
+        res.render('homepage', {
+          users,
+          // Pass the logged in flag to the template
+          logged_in: req.session.logged_in,
+        });
+      } catch (err) {
+        res.status(500).json(err);
+      }
     });
-  
 
+    router.get('/login', (req, res) => {
+      // If a session exists, redirect the request to the homepage
+      if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+      }
+    
+      res.render('login');
+    });
+
+    router.get('/homepage', async(req, res) => {
+      res.render('homepage');
+    });
 // Display Book Now Route
   router.get('/booknow', async (req, res) => {
   res.render('booknow');
