@@ -8,10 +8,12 @@ const { North } = require('../models');
     res.render('homepage');
     });
   
+
 // Display Book Now Route
   router.get('/booknow', async (req, res) => {
   res.render('booknow');
   });
+
      
   //end session 
   router.get('/end', async (req, res) => {
@@ -32,6 +34,8 @@ const { North } = require('../models');
     }
   })
 
+
+    
 
 // Display destinations by continents 
     //Africa
