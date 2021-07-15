@@ -5,9 +5,9 @@ const Trip = require('./trip');
 const Asia = require('./asia');
 const Australia = require('./australia');
 const Africa = require('./africa');
-const Europe = require('./Europe');
+const Europe = require('./europe');
 const North = require('./north');
-const South = require('./South');
+const South = require('./south');
 
 const User = require('./user');
 
