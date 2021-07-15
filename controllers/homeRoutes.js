@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, BookingInfo } = require('../models');
 const { Asia, Africa, Australia, South, Europe } = require('../models');
 const { North } = require('../models');
 const withAuth = require('../utils/auth');
@@ -57,9 +57,18 @@ const withAuth = require('../utils/auth');
 
      
   //end session 
-  router.get('/end', async (req, res) => {
-    res.render('end');
+  // router.get('/end', async (req, res) => {
+  //   res.render('end');
+  //   });
+
+    router.get('/end', async (req, res) => {
+      const confirmData = await BookingInfo.findAll().catch((err) => {
+       res.join(err);
     });
+     const booking = confirmData.map((confirm) => confirm.get({ plain: true }));
+     res.render('end', { booking });
+     console.log('BOOOKINGGGGGGGGGGGGG!!!!', booking)
+       }); 
   
     //return to homepage at the end screen
   router.get('/homepage', async (req, res) => {
