@@ -38,9 +38,11 @@ const withAuth = require('../utils/auth');
       res.render('login');
     });
 
-    router.get('/homepage', async(req, res) => {
-      res.render('homepage');
+// Display Homepage of Site
+  router.get('/homepage', async(req, res) => {
+  res.render('homepage');
     });
+
 // Display Book Now Route
   router.get('/booknow', async (req, res) => {
   res.render('booknow');
@@ -65,9 +67,6 @@ const withAuth = require('../utils/auth');
       res.render('register')
     }
   })
-
-
-    
 
 // Display destinations by continents 
     //Africa
