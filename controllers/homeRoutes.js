@@ -48,7 +48,7 @@ const withAuth = require('../utils/auth');
     });
 
 // Display Homepage of Site
-  router.get('/', async(req, res) => {
+  router.get('/homepage', async(req, res) => {
   res.render('homepage');
     });
 
