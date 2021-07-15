@@ -4,10 +4,12 @@ const { Asia, Africa, Australia, South, Europe } = require('../models');
 const { North } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Load HOME PAGE
+// Load HOME PAGE first, option
   // router.get('/', async (req, res) => {
   //   res.render('homepage');
   //   });
+
+
 // sends them to log in first
     router.get('/', withAuth, async (req, res) => {
       try {
@@ -54,14 +56,13 @@ const withAuth = require('../utils/auth');
   router.get('/booking/book', async (req, res) => {
   res.render('booknow');
   });
-
      
-  //end session 
-  // router.get('/end', async (req, res) => {
-  //   res.render('end');
-  //   });
+  //end session after booking
+  router.get('/end', async (req, res) => {
+    res.render('end');
+    });
 
-    router.get('/end', async (req, res) => {
+  router.get('/end', async (req, res) => {
       const confirmData = await BookingInfo.findAll().catch((err) => {
        res.join(err);
     });
@@ -69,31 +70,17 @@ const withAuth = require('../utils/auth');
      res.render('end', { booking });
      console.log('BOOOKINGGGGGGGGGGGGG!!!!', booking)
        }); 
-  
-    //return to homepage at the end screen
-  router.get('/homepage', async (req, res) => {
-    res.render('homepage');
-  });
 
     //check to see if created account prior to booking, otherwise, create an account
-  router.get('/register',async (req, res) => {
- try {res.render("register");
+router.get('/logout',async (req, res) => {
+ try {res.render("logout");
 
 } catch (err){
   console.log ('err')
   res.status(500).json(err)
-
 }
 });
 
- 
-    //   if (req.session.logged_in) {
-  //     res.redirect('/booking')
-  //   } else {
-
-  //     res.render('register')
-  //   }
-  // })
 
 // Display destinations by continents 
     //Africa
@@ -156,68 +143,7 @@ const withAuth = require('../utils/auth');
         console.log('ITS WORKING!!!!', destination)
           }); 
 
-
-
-        //   router.post('/register', async (req, res) => {
-        //     try {
-        //       const userData = await User.create(req.body);
-          
-        //       req.session.save(() => {
-        //         req.session.user_id = userData.id;
-        //         req.session.logged_in = true;
-          
-        //         res.status(200).json(userData);
-        //       });
-        //     } catch (err) {
-        //       res.status(400).json(err);
-        //     }
-        //   });
-        
-        //   // Login
-        // router.post('/login', async (req, res) => {
-        //     try {
-        //       const userData = await User.findOne({ where: { email: req.body.email } });
-          
-        //       if (!userData) {
-        //         res
-        //           .status(400)
-        //           .json({ message: 'Incorrect email or password, please try again' });
-        //         return;
-        //       }
-          
-        //       const validPassword = await userData.checkPassword(req.body.password);
-          
-        //       if (!validPassword) {
-        //         res
-        //           .status(400)
-        //           .json({ message: 'Incorrect email or password, please try again' });
-        //         return;
-        //       }
-          
-        //       req.session.save(() => {
-        //         req.session.user_id = userData.id;
-        //         req.session.logged_in = true;
-                
-        //         res.json({ user: userData, message: 'You are now logged in!' });
-        //       });
-          
-        //     } catch (err) {
-        //       res.status(400).json(err);
-        //     }
-        //   });
-        
-        //   // Logout
-        //   router.post('/logout', (req, res) => {
-        //     if (req.session.logged_in) {
-        //       req.session.destroy(() => {
-        //         res.status(204).end();
-        //       });
-        //     } else {
-        //       res.status(404).end();
-        //     }
-            
-        //   });
-          
+         
 module.exports = router;
 
 
