@@ -35,6 +35,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
+var home = require('./controllers/homeRoutes');
+var book = require('./controllers/api/bookingInfoRoutes.js');
+app.use("/", home);
+app.use("/booking", book);
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
