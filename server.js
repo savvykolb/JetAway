@@ -44,6 +44,6 @@ app.use("/booking", book);
 app.use("/user", users)
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Listening on port %s. Visit http://localhost:%s/ in your browser'));
 });
