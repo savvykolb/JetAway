@@ -8,8 +8,7 @@ const Africa = require('./africa');
 const Europe = require('./europe');
 const North = require('./north');
 const South = require('./south');
-
-const User = require('./user');
+const User = require('./users');
 
 Continent.hasMany(Trip,{
     onDelete:'CASCADE'
@@ -72,11 +71,12 @@ Recommendation.belongsTo(Trip,{
 });
 
 User.hasMany(BookingInfo, {
-    onDelete:'CASCADE'
-});
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+  });
 
 BookingInfo.belongsTo(User, {
     onDelete:'CASCADE'
 });
 
-module.exports = {BookingInfo, Continent, Recommendation, Trip,Asia,Africa, Australia,North, South, Europe,  User}
+module.exports = {BookingInfo, Continent, Recommendation, Trip,Asia,Africa, Australia,North, South, Europe, User};

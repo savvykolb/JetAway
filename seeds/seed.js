@@ -4,23 +4,21 @@ const seedEurope = require('./europeData');
 const seedAfrica = require('./africaData');
 const seedNorth = require('./northData');
 //checked
+
+
+// const userData = require('./userData.json');
 const seedSouth = require('./southData');
 const seedAustralia = require('./australiaData');
-// const seedContinents = require('./continentData')
-// const seedRecommendation = require('./recommendationData')
+
+const seedUser = require('./userData');
 const sequelize = require('../config/config');
+
 
 
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
-// const seedDatabase = async () => {
-//     await sequelize.sync({ force: true });
-//     console.log('\n----- DATABASE SYNCED -----\n');
-
-//     await seedContinents();
-//     console.log('\n----- CONTINENTS SEEDED -----\n');
 
     await seedEurope();
     console.log('\n----- EUROPE SEEDED -----\n');
@@ -42,10 +40,11 @@ const seedDatabase = async () => {
     
     await seedTrips();
     console.log('\n----- TRIPS SEEDED -----\n');
-
-//     await seedRecommendation();
-//     console.log('\n----- RECOMMENDATION SEEDED -----\n');
     
+    await seedUser();
+    console.log("++++++++++++++++++++++++++++++")
+   
+
     process.exit(0);
 };
 
