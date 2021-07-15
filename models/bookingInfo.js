@@ -5,6 +5,28 @@ class BookingInfo extends Model {}
 
 BookingInfo.init(
     {
+        firstName: {
+            type: DataTypes.STRING
+          },
+          lastName: {
+            type: DataTypes.STRING
+          },
+          email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            unique: true,
+            validate: {
+              isEmail: true,
+            },
+          },
+          phoneNumber: {
+              type: DataTypes.INTEGER,
+              allowNull: true,
+              unique: {
+                args: true,
+              msg: 'User already exists'
+              },
+          },
         address: {
             type: DataTypes.STRING,
             allowNull:false
@@ -17,16 +39,12 @@ BookingInfo.init(
             type: DataTypes.STRING,
             allowNull:false,
         },
-        country: {
-            type: DataTypes.STRING,
-            allowNull:false,
-        },
         zipcode: {
             type: DataTypes.INTEGER,
             allowNull:false,
         },
         Bday: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull:false,
         },
         emergencyFirstName: {
@@ -40,7 +58,11 @@ BookingInfo.init(
           },
         emergencyPhoneNumber: {
             type: DataTypes.INTEGER
-          }
+          },
+        destination: {
+            type: DataTypes.STRING, 
+            allowNull:false,
+        }
     },
     {
         sequelize,
