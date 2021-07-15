@@ -42,3 +42,11 @@ function nextImage() {
 $( function() {
     $( "#datepicker" ).datepicker();
   } );
+
+
+
+
+
+
+
+ 

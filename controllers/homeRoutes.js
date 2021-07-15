@@ -51,7 +51,7 @@ const withAuth = require('../utils/auth');
     });
 
 // Display Book Now Route
-  router.get('/booknow', async (req, res) => {
+  router.get('/booking/book', async (req, res) => {
   res.render('booknow');
   });
 
