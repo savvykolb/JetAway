@@ -37,8 +37,8 @@ const seedDatabase = async () => {
     await seedAsia();
     console.log('\n----- ASIA SEEDED -----\n');
     
-    await seedUser();
-    console.log("++++++++++++++++++++++++++++++")
+    // await seedUser();
+    // console.log("++++++++++++++++++++++++++++++")
    
 
     process.exit(0);
