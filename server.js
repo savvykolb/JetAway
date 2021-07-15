@@ -37,8 +37,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var home = require('./controllers/homeRoutes');
 var book = require('./controllers/api/bookingInfoRoutes.js');
+var users = require('./controllers/api/userRoutes.js');
+
 app.use("/", home);
 app.use("/booking", book);
+app.use("/user", users)
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
