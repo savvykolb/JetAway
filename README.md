@@ -1,10 +1,16 @@
 # JetAway
 
 ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
+
+
+![Screenshot (95)](https://user-images.githubusercontent.com/80806004/125904984-0a24adc6-97f5-438d-8649-8488d2c72903.png)
+![Screenshot (94)](https://user-images.githubusercontent.com/80806004/125904994-28a0d70e-e22e-467f-b888-5181994a565d.png)
+
 #### https://jetaway1.herokuapp.com/
 
 ## Project Description:
-This application is a command line interface **C**ontent **M**anagement **S**ystem for managing a company's employees using node, inquirer, and MySQL. The example company data seeded into the data base is none other than Dunder & Mifflin. 
+This application was created in order to feed the hunger of traveling.  Now that we have exited the chaos of COVID Our users are able to travel the world with other travelers and build new relationships.  We have designed a full stack app that Allows our users to book a trip without planning it. Our company specializes in creating a trip of a life time for our users. From traveling the world,to hiking, camping, zip-lining, amazing cultural and dinning experiences and more, its all pre planned. This application strategically organizes trips for groups of 10 with similar interest. In addition our company is partnered with one of the best booking agencies Travelrus who are responsible for all room and travel plans thats is financially friendly to all our travelers.  
+
 
 ## Table of Contents
 * [Installation](#installation)
@@ -15,14 +21,36 @@ This application is a command line interface **C**ontent **M**anagement **S**yst
 * [License](#license)
 
 ## Installation
-You will need to ensure that you have node.js installed on your device. 
+You will need to ensure that you have node.js and Mysql installed on your device. 
 
 ## Usage
 You will need to fork and open this application and then open your terminal. Once you open your terminal, you will need to do an 'npm i' to download your node_modules and package-lock.json. Once you have these two files, you will type ‘node tracker.js’ into the terminal. You will then be able to navigate through different prompts within the application.
+In order to seed your Data run a node seeds/seed
 
-Walkthrough Video:
+## Technologies Used:
+We used HTML, CSS, CSS Bootstrap Framework, Javascript, Node.js, Express, Cloudinary, MySQL, Sequelize, Google Font, CSS Map Application, ESLINT, Prettier
 
-#### https://drive.google.com/file/d/1giWMu-EH2nnfC-CZhr8bC3v0yxuHktkt/view?usp=sharing
+## NPM Installations:
+
+  bcrypt
+    cloudinary
+    cloudinary-core
+    connect-session-sequelize
+    cookie-parser
+    dotenv"
+    express
+    express-handlebars
+    express-session
+    helmet
+    moment
+    morgan
+    mysql2
+    nodemon
+    passport
+    passport-local
+    seed
+    seeds
+    sequelize
 
 ## Contributors
  If there is anything users feel would be beneficial to add, please feel free to contact me.
@@ -54,3 +82,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
