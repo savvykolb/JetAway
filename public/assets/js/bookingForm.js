@@ -7,13 +7,16 @@ const bookingFormHandler = async (event) => {
     const phoneNumber = document.querySelector('#inputPhone').value.trim();
     const address = document.querySelector('#inputAddress').value.trim();
     const cityTown = document.querySelector('#inputCity').value.trim();
-    const state = document.querySelector('#inputState').value.trim();
+    const state = document.querySelector('#state').value.trim();
     const zipcode = document.querySelector('#inputZip').value.trim();
     const Bday = document.querySelector('#inputBday').value.trim();
     const destination = document.querySelector('#destination').value.trim();
   
+    console.log(firstName, lastName, email, phoneNumber, address, cityTown, state, zipcode, Bday, destination)
+
+
     if (firstName && lastName && email && phoneNumber && address && cityTown && state && zipcode && Bday && destination) {
-        const response = await fetch('/api/booking/book', {
+        const response = await fetch('/booking/book', {
             method: 'POST',
             body: JSON.stringify({ firstName, lastName, email, phoneNumber, address, cityTown, state, zipcode, Bday, destination }),
             headers: { 'Content-Type': 'application/json' }
@@ -28,5 +31,5 @@ const bookingFormHandler = async (event) => {
     //     };
 
 document
-.querySelector('.booknow')
+.querySelector('.bookBtn')
 .addEventListener('click', bookingFormHandler)
