@@ -22,8 +22,14 @@ const bookingFormHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' }
         });
         console.log('response:', response)
-    }};
-  
+        if (response.ok) {
+            document.location.replace('/end');
+        //   } else {
+        //     alert("Please complete form!");
+        //   }
+        }
+      };
+    };
     //   if (response.ok) {
     //     const requestOptions = {
     //       method: 'POST',
