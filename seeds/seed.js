@@ -16,7 +16,7 @@ const sequelize = require('../config/config');
 
 
 const seedDatabase = async () => {
-    await sequelize.sync({ force: false });
+    await sequelize.sync({ force: true });
     console.log('\n----- DATABASE SYNCED -----\n');
 
     await seedEurope();
