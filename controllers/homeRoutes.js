@@ -58,9 +58,9 @@ const withAuth = require('../utils/auth');
   });
      
   //end session after booking
-  router.get('/end', async (req, res) => {
-    res.render('end');
-    });
+  // router.get('/end', async (req, res) => {
+  //   res.render('end');
+  //   });
 
   router.get('/end', async (req, res) => {
       const confirmData = await BookingInfo.findAll().catch((err) => {

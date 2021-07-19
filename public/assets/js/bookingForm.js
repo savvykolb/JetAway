@@ -25,9 +25,10 @@ const bookingFormHandler = async (event) => {
         if (response.ok) {
             console.log('response.ok:', response.ok)
             document.location.replace('/end');
-          } else {
-            alert("Please complete form!");
-          }
+        }
+        //   } else {
+        //     alert("Please complete form!");
+        //   }
         }
       };
    
