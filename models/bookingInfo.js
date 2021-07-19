@@ -22,10 +22,6 @@ BookingInfo.init(
           phoneNumber: {
               type: DataTypes.INTEGER,
               allowNull: true,
-              unique: {
-                args: true,
-              msg: 'User already exists'
-              },
           },
         address: {
             type: DataTypes.STRING,

@@ -23,13 +23,14 @@ const bookingFormHandler = async (event) => {
         });
         console.log('response:', response)
         if (response.ok) {
+            console.log('response.ok:', response.ok)
             document.location.replace('/end');
-        //   } else {
-        //     alert("Please complete form!");
-        //   }
+          } else {
+            alert("Please complete form!");
+          }
         }
       };
-    };
+   
     //   if (response.ok) {
     //     const requestOptions = {
     //       method: 'POST',
