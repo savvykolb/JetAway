@@ -7,12 +7,12 @@
         <div class="col-xs-6">
           <div class="card">
             <div class="card-body">
-            <h3 class="card-title">Thank you, Savannah, for booking!! </h3>
+            <h3 class="card-title">Thank you, {{booking.firstName}}, for booking!! </h3>
             <p>Your confirmation number is: 4582154754B</p>
               <p class="card-text">A TraverlsRus agent will be in touch within 24 hours
     for any question please email us at Jetaway.com
      or call at 800-555-5555</p>  
-     <p>Hawaii: Big Island Adventure will be a trip of a life time!</p>
+     <p>{{booking.destination}} will be a trip of a life time!</p>
             <a href="https://jetaway1.herokuapp.com/homepage" class="btn btn-warning btn-lg">Go Home!</a>
           </div>
         </div>
